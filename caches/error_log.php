@@ -21251,3 +21251,9 @@
 <?php exit;?>07-25 15:57:25 | 8192 | Function split() is deprecated | caches\caches_model\caches_data\content_update.class.php | 70
 <?php exit;?>11-18 14:51:56 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 251
 <?php exit;?>11-18 14:51:56 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 260
+<?php exit;?>11-18 16:01:54 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 251
+<?php exit;?>11-18 16:01:54 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 260
+<?php exit;?>11-18 16:03:56 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 251
+<?php exit;?>11-18 16:03:56 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 260
+<?php exit;?>11-18 16:06:06 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 251
+<?php exit;?>11-18 16:06:06 | 2 | "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? | phpcms\libs\classes\mysql.class.php | 260
