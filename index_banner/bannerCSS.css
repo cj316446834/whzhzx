@@ -1,0 +1,455 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0;}
+ul,li{list-style-type:none;}
+/********* banner *******/
+.banner {width:100%;height:400px;position:relative;overflow:hidden}
+.banner .DB_bgSet{position:relative;}
+.banner .DB_bgSet li{position:absolute;width:100%;height:400px;display:none}
+.banner .DB_bgSet li a{width:100%;height:400px; display:block; }
+
+.banner .DB_imgSet{position:absolute;width:1000px;left:50%;margin-left:-500px;}
+
+/********  2016-07-01 banner **********/
+/*乔雅登*/
+.banner .DB_imgSet .DB_54_1{position:absolute;left:95px;top:59px;}
+.banner .DB_imgSet .DB_54_2{position:absolute;left:98px;top:247px;}
+.banner .DB_imgSet .DB_54_3{position:absolute;left:166px;top:323px;}
+
+/*给你天生网红脸*/
+.banner .DB_imgSet .DB_55_1{position:absolute;left:90px;top:74px;}
+.banner .DB_imgSet .DB_55_2{position:absolute;left:-52px;top:108px;}
+.banner .DB_imgSet .DB_55_3{position:absolute;left:-66px;top:106px;}
+.banner .DB_imgSet .DB_55_4{position:absolute;left:27px;top:268px;}
+.banner .DB_imgSet .DB_55_5{position:absolute;left:152px;top:344px;}
+
+/*7.23黄金龙来院*/
+.banner .DB_imgSet .DB_56_1{position:absolute;left:-47px;top:81px;}
+.banner .DB_imgSet .DB_56_2{position:absolute;left:48px;top:164px;}
+.banner .DB_imgSet .DB_56_3{position:absolute;left:333px;top:164px;}
+.banner .DB_imgSet .DB_56_4{position:absolute;left:51px;top:270px;}
+
+
+/********  2016-07-01 banner **********/
+
+
+/********  2016-06-01 banner **********/
+/*招募艾莉薇女神*/
+.banner .DB_imgSet .DB_53_1{position:absolute;left:303px;top:60px;}
+.banner .DB_imgSet .DB_53_2{position:absolute;left:597px;top:62px;}
+.banner .DB_imgSet .DB_53_3{position:absolute;left:531px;top:315px;}
+
+/*超声刀*/
+.banner .DB_imgSet .DB_52_1{position:absolute;left:80px;top:79px;}
+.banner .DB_imgSet .DB_52_2{position:absolute;left:204px;top:41px;}
+.banner .DB_imgSet .DB_52_3{position:absolute;left:74px;top:210px;}
+.banner .DB_imgSet .DB_52_4{position:absolute;left:184px;top:244px;}
+.banner .DB_imgSet .DB_52_5{position:absolute;left:105px;top:268px;}
+.banner .DB_imgSet .DB_52_6{position:absolute;left:255px;top:315px;}
+
+
+/*美丽新花yang*/
+.banner .DB_imgSet .DB_51_1{position:absolute;left:377px;top:0px;}
+.banner .DB_imgSet .DB_51_2{position:absolute;left:414px;top:41px;}
+.banner .DB_imgSet .DB_51_3{position:absolute;left:445px;top:87px;}
+.banner .DB_imgSet .DB_51_4{position:absolute;left:439px;top:180px;}
+.banner .DB_imgSet .DB_51_5{position:absolute;left:508px;top:267px;}
+.banner .DB_imgSet .DB_51_6{position:absolute;left:525px;top:312px;}
+.banner .DB_imgSet .DB_51_7{position:absolute;left:546px;top:337px;}
+
+
+
+/*6.19中翰巅峰论鼻*/
+.banner .DB_imgSet .DB_50_1{position:absolute;left:70px;top:95px;}
+.banner .DB_imgSet .DB_50_2{position:absolute;left:433px;top:97px;}
+.banner .DB_imgSet .DB_50_3{position:absolute;left:363px;top:107px;}
+.banner .DB_imgSet .DB_50_4{position:absolute;left:74px;top:183px;}
+.banner .DB_imgSet .DB_50_5{position:absolute;left:189px;top:267px;}
+
+
+/*6.12日面部年轻化大师*/
+.banner .DB_imgSet .DB_49_1{position:absolute;left:-70px;top:40px;}
+.banner .DB_imgSet .DB_49_2{position:absolute;left:221px;top:45px;}
+.banner .DB_imgSet .DB_49_3{position:absolute;left:213px;top:99px;}
+.banner .DB_imgSet .DB_49_4{position:absolute;left:-66px;top:190px;}
+.banner .DB_imgSet .DB_49_5{position:absolute;left:49px;top:272px;}
+
+
+/*中翰美丽送*/
+.banner .DB_imgSet .DB_48_1{position:absolute;left:56px;top:96px;}
+.banner .DB_imgSet .DB_48_2{position:absolute;left:144px;top:49px;}
+.banner .DB_imgSet .DB_48_3{position:absolute;left:53px;top:170px;}
+.banner .DB_imgSet .DB_48_4{position:absolute;left:119px;top:230px;}
+.banner .DB_imgSet .DB_48_5{position:absolute;left:237px;top:264px;}
+.banner .DB_imgSet .DB_48_6{position:absolute;left:258px;top:297px;}
+
+/********  2016-06-01 banner **********/
+
+
+/********  2016-05-01 banner **********/
+/*5.1布莱恩亲诊*/
+.banner .DB_imgSet .DB_45_1{position:absolute;left:290px;top:49px;}
+.banner .DB_imgSet .DB_45_2{position:absolute;left:409px;top:135px;}
+.banner .DB_imgSet .DB_45_3{position:absolute;left:475px;top:177px;}
+.banner .DB_imgSet .DB_45_4{position:absolute;left:466px;top:223px;}
+.banner .DB_imgSet .DB_45_5{position:absolute;left:499px;top:283px;}
+
+/*5.14*/
+.banner .DB_imgSet .DB_46_1{position:absolute;left:660px;top:30px;}
+.banner .DB_imgSet .DB_46_2{position:absolute;left:535px;top:176px;}
+.banner .DB_imgSet .DB_46_3{position:absolute;left:658px;top:255px;}
+.banner .DB_imgSet .DB_46_4{position:absolute;left:636px;top:317px;}
+
+/*5.21水光注射*/
+.banner .DB_imgSet .DB_47_1{position:absolute;left:495px;top:72px;}
+.banner .DB_imgSet .DB_47_2{position:absolute;left:460px;top:114px;}
+.banner .DB_imgSet .DB_47_3{position:absolute;left:955px;top:111px;}
+.banner .DB_imgSet .DB_47_4{position:absolute;left:469px;top:244px;}
+.banner .DB_imgSet .DB_47_5{position:absolute;left:610px;top:297px;}
+
+
+/********  2016-05-01 banner **********/
+
+/********  2016-04-01 banner **********/
+
+/*四级整形资质*/
+.banner .DB_imgSet .DB_39_1{position:absolute;left:-65px;top:29px;}
+.banner .DB_imgSet .DB_39_2{position:absolute;left:259px;top:61px;}
+.banner .DB_imgSet .DB_39_3{position:absolute;left:207px;top:119px;}
+.banner .DB_imgSet .DB_39_4{position:absolute;left:178px;top:162px;}
+.banner .DB_imgSet .DB_39_5{position:absolute;left:243px;top:238px;}
+.banner .DB_imgSet .DB_39_6{position:absolute;left:352px;top:276px;}
+.banner .DB_imgSet .DB_39_7{position:absolute;left:271px;top:315px;}
+
+/*傲偌拉女王就是你*/
+.banner .DB_imgSet .DB_40_1{position:absolute;left:-193px;top:0px;}
+.banner .DB_imgSet .DB_40_2{position:absolute;left:541px;top:0px;}
+.banner .DB_imgSet .DB_40_3{position:absolute;left:131px;top:0px;}
+.banner .DB_imgSet .DB_40_4{position:absolute;left:140px;top:104px;}
+.banner .DB_imgSet .DB_40_5{position:absolute;left:344px;top:292px;}
+
+/*奥诺拉ALLURA*/
+.banner .DB_imgSet .DB_41_1{position:absolute;left:374px;top:74px;}
+.banner .DB_imgSet .DB_41_2{position:absolute;left:1021px;top:52px;}
+.banner .DB_imgSet .DB_41_3{position:absolute;left:307px;top:165px;}
+.banner .DB_imgSet .DB_41_4{position:absolute;left:567px;top:174px;}
+.banner .DB_imgSet .DB_41_5{position:absolute;left:801px;top:147px;}
+
+/*美国赛诺秀*/
+.banner .DB_imgSet .DB_42_1{position:absolute;left:885px;top:66px;}
+.banner .DB_imgSet .DB_42_2{position:absolute;left:437px;top:90px;}
+.banner .DB_imgSet .DB_42_3{position:absolute;left:477px;top:175px;}
+.banner .DB_imgSet .DB_42_4{position:absolute;left:472px;top:269px;}
+
+/*360水动力吸脂*/
+.banner .DB_imgSet .DB_43_1{position:absolute;left:864px;top:39px;}
+.banner .DB_imgSet .DB_43_2{position:absolute;left:386px;top:80px;}
+.banner .DB_imgSet .DB_43_3{position:absolute;left:405px;top:156px;}
+.banner .DB_imgSet .DB_43_4{position:absolute;left:383px;top:230px;}
+
+/*长效玻尿酸*/
+.banner .DB_imgSet .DB_44_1{position:absolute;left:829px;top:57px;}
+.banner .DB_imgSet .DB_44_2{position:absolute;left:384px;top:83px;}
+.banner .DB_imgSet .DB_44_3{position:absolute;left:417px;top:221px;}
+.banner .DB_imgSet .DB_44_4{position:absolute;left:434px;top:296px;}
+
+
+
+
+/********  2016-04-01 banner **********/
+
+
+/********  2016-03-01 banner **********/
+
+/*NAB面部微整创始人 邵宏*/
+.banner .DB_imgSet .DB_38_1{position:absolute;left:422px;top:73px;}
+.banner .DB_imgSet .DB_38_2{position:absolute;left:341px;top:145px;}
+.banner .DB_imgSet .DB_38_3{position:absolute;left:735px;top:180px;}
+.banner .DB_imgSet .DB_38_4{position:absolute;left:566px;top:330px;}
+
+/*全球招募逆龄体验着*/
+.banner .DB_imgSet .DB_36_1{position:absolute;left:425px;top:60px;}
+.banner .DB_imgSet .DB_36_2{position:absolute;left:264px;top:207px;}
+.banner .DB_imgSet .DB_36_3{position:absolute;left:468px;top:248px;}
+.banner .DB_imgSet .DB_36_4{position:absolute;left:566px;top:320px;}
+
+
+/*中翰脱毛新时代*/
+.banner .DB_imgSet .DB_37_1{position:absolute;left:-104px;top:54px;}
+.banner .DB_imgSet .DB_37_2{position:absolute;left:649px;top:79px;}
+.banner .DB_imgSet .DB_37_3{position:absolute;left:-72px;top:234px;}
+.banner .DB_imgSet .DB_37_4{position:absolute;left:608px;top:265px;}
+
+
+/*整形分期*/
+.banner .DB_imgSet .DB_33_1{position:absolute;left:398px;top:41px;}
+.banner .DB_imgSet .DB_33_2{position:absolute;left:789px;top:29px;}
+.banner .DB_imgSet .DB_33_3{position:absolute;left:399px;top:155px;}
+.banner .DB_imgSet .DB_33_4{position:absolute;left:401px;top:218px;}
+.banner .DB_imgSet .DB_33_5{position:absolute;left:529px;top:335px;}
+
+/*3.8女人节*/
+.banner .DB_imgSet .DB_34_1{position:absolute;left:30px;top:67px;}
+.banner .DB_imgSet .DB_34_2{position:absolute;left:138px;top:164px;}
+.banner .DB_imgSet .DB_34_3{position:absolute;left:265px;top:243px;}
+.banner .DB_imgSet .DB_34_4{position:absolute;left:73px;top:243px;}
+.banner .DB_imgSet .DB_34_5{position:absolute;left:147px;top:330px;}
+
+/*专属美胸·中翰定制*/
+.banner .DB_imgSet .DB_35_1{position:absolute;left:119px;top:38px;}
+.banner .DB_imgSet .DB_35_2{position:absolute;left:-48px;top:90px;}
+.banner .DB_imgSet .DB_35_3{position:absolute;left:34px;top:181px;}
+.banner .DB_imgSet .DB_35_4{position:absolute;left:40px;top:220px;}
+.banner .DB_imgSet .DB_35_5{position:absolute;left:148px;top:264px;}
+.banner .DB_imgSet .DB_35_6{position:absolute;left:105px;top:303px;}
+
+/********  2016-03-01 banner **********/
+
+
+/********  2016-02-05 banner **********/
+/*过年不打烊*/
+.banner .DB_imgSet .DB_20_1{position:absolute;left:637px;top:89px;}
+.banner .DB_imgSet .DB_20_2{position:absolute;left:590px;top:275px;}
+/*定制全瓷牙*/
+.banner .DB_imgSet .DB_21_1{position:absolute;left:461px;top:83px;}
+.banner .DB_imgSet .DB_21_2{position:absolute;left:356px;top:206px;}
+.banner .DB_imgSet .DB_21_3{position:absolute;left:453px;top:269px;}
+/*开运双色晕染绘丝眉*/
+.banner .DB_imgSet .DB_22_1{position:absolute;left:-67px;top:80px;}
+.banner .DB_imgSet .DB_22_2{position:absolute;left:-31px;top:188px;}
+.banner .DB_imgSet .DB_22_3{position:absolute;left:-47px;top:293px;}
+/*做气质女王 不做“斑女郎”*/
+.banner .DB_imgSet .DB_23_1{position:absolute;left:412px;top:63px;}
+.banner .DB_imgSet .DB_23_2{position:absolute;left:544px;top:174px;}
+.banner .DB_imgSet .DB_23_3{position:absolute;left:497px;top:279px;}
+/*除皱针*/
+.banner .DB_imgSet .DB_24_1{position:absolute;left:251px;top:224px;}
+.banner .DB_imgSet .DB_24_2{position:absolute;left:394px;top:81px;}
+.banner .DB_imgSet .DB_24_3{position:absolute;left:314px;top:226px;}
+.banner .DB_imgSet .DB_24_4{position:absolute;left:536px;top:285px;}
+/*全面部 脂肪平衡术*/
+.banner .DB_imgSet .DB_25_1{position:absolute;left:69px;top:87px;}
+.banner .DB_imgSet .DB_25_2{position:absolute;left:36px;top:177px;}
+.banner .DB_imgSet .DB_25_3{position:absolute;left:34px;top:291px;}
+
+
+
+
+
+/********  2016-02-05 banner **********/
+
+
+/***** 2016-01-19 banner *******/
+
+/*2015湖北整形医院口碑榜*/
+.banner .DB_imgSet .DB_19_1{position:absolute;left:331px;top:95px;}
+
+/*中翰美眼月*/
+.banner .DB_imgSet .DB_18_1{position:absolute;left:94px;top:39px;}
+.banner .DB_imgSet .DB_18_2{position:absolute;left:111px;top:201px}
+.banner .DB_imgSet .DB_18_3{position:absolute;left:43px;top:248px}
+
+/***** 2016-01-19 banner *******/
+
+
+
+/***** 2015-12-17 banner *******/
+
+/*美丽首映“礼”*/
+.banner .DB_imgSet .DB_17_1{position:absolute;left:426px;top:40px;}
+.banner .DB_imgSet .DB_17_2{position:absolute;left:544px;top:169px}
+.banner .DB_imgSet .DB_17_3{position:absolute;left:415px;top:190px}
+.banner .DB_imgSet .DB_17_4{position:absolute;left:563px;top:311px}
+
+
+
+/*高端隆鼻 就选菲思挺*/
+.banner .DB_imgSet .DB_15_1{position:absolute;left:595px;top:0px;}
+.banner .DB_imgSet .DB_15_2{position:absolute;left:118px;top:60px}
+.banner .DB_imgSet .DB_15_3{position:absolute;left:14px;top:153px}
+.banner .DB_imgSet .DB_15_4{position:absolute;left:40px;top:270px}
+.banner .DB_imgSet .DB_15_5{position:absolute;left:133px;top:286px}
+/*Mela入驻中翰*/
+.banner .DB_imgSet .DB_16_1{position:absolute;left:74px;top:60px;}
+.banner .DB_imgSet .DB_16_2{position:absolute;left:68px;top:114px}
+.banner .DB_imgSet .DB_16_3{position:absolute;left:407px;top:165px}
+.banner .DB_imgSet .DB_16_4{position:absolute;left:67px;top:257px}
+.banner .DB_imgSet .DB_16_5{position:absolute;left:94px;top:309px}
+
+
+/***** 2015-12-17 banner *******/
+
+/***** 2015-11-03 banner *******/
+
+/*你的美丽·来自中翰*/
+.banner .DB_imgSet .DB_14_1{position:absolute;left:320px;top:36px;}
+.banner .DB_imgSet .DB_14_2{position:absolute;left:320px;top:135px}
+.banner .DB_imgSet .DB_14_3{position:absolute;left:71px;top:242px}
+.banner .DB_imgSet .DB_14_4{position:absolute;left:310px;top:328px}
+
+/*进口长效玻尿酸*/
+.banner .DB_imgSet .DB_13_1{position:absolute;left:384px;top:101px;}
+.banner .DB_imgSet .DB_13_2{position:absolute;left:993px;top:47px}
+.banner .DB_imgSet .DB_13_3{position:absolute;left:383px;top:152px}
+.banner .DB_imgSet .DB_13_4{position:absolute;left:556px;top:152px}
+
+
+/*我的美鼻来自中翰*/
+.banner .DB_imgSet .DB_12_1{position:absolute;left:23px;top:45px;}
+.banner .DB_imgSet .DB_12_2{position:absolute;left:-6px;top:157px}
+.banner .DB_imgSet .DB_12_3{position:absolute;left:395px;top:46px}
+.banner .DB_imgSet .DB_12_4{position:absolute;left:31px;top:271px}
+.banner .DB_imgSet .DB_12_5{position:absolute;left:20px;top:305px;}
+.banner .DB_imgSet .DB_12_6{position:absolute;left:112px;top:334px;}
+
+
+/*半永久化妆术*/
+.banner .DB_imgSet .DB_11_1{position:absolute;left:571px;top:0px;}
+.banner .DB_imgSet .DB_11_2{position:absolute;left:-139px;top:87px}
+.banner .DB_imgSet .DB_11_3{position:absolute;left:103px;top:199px}
+.banner .DB_imgSet .DB_11_4{position:absolute;left:-21px;top:277px}
+.banner .DB_imgSet .DB_11_5{position:absolute;left:235px;top:277px;}
+.banner .DB_imgSet .DB_11_6{position:absolute;left:-21px;top:315px;}
+.banner .DB_imgSet .DB_11_7{position:absolute;left:235px;top:315px;}
+
+
+/*普拉提逆龄紧肤*/
+.banner .DB_imgSet .DB_10_1{position:absolute;left:-162px;top:0px;}
+.banner .DB_imgSet .DB_10_2{position:absolute;left:412px;top:86px}
+.banner .DB_imgSet .DB_10_3{position:absolute;left:479px;top:188px}
+.banner .DB_imgSet .DB_10_4{position:absolute;left:453px;top:277px}
+
+/*定制版丰胸*/
+.banner .DB_imgSet .DB_9_1{position:absolute;left:550px;top:81px;}
+.banner .DB_imgSet .DB_9_2{position:absolute;left:469px;top:155px}
+.banner .DB_imgSet .DB_9_3{position:absolute;left:549px;top:253px}
+.banner .DB_imgSet .DB_9_4{position:absolute;left:549px;top:301px}
+
+/*隐形牙齿矫正*/
+.banner .DB_imgSet .DB_8_1{position:absolute;left:592px;top:0px;}
+.banner .DB_imgSet .DB_8_2{position:absolute;left:-51px;top:67px}
+.banner .DB_imgSet .DB_8_3{position:absolute;left:98px;top:165px}
+.banner .DB_imgSet .DB_8_4{position:absolute;left:17px;top:284px}
+
+/*水光注射*/
+.banner .DB_imgSet .DB_7_1{position:absolute;left:580px;top:72px;}
+.banner .DB_imgSet .DB_7_2{position:absolute;left:253px;top:113px}
+.banner .DB_imgSet .DB_7_3{position:absolute;left:257px;top:296px}
+.banner .DB_imgSet .DB_7_4{position:absolute;left:596px;top:296px}
+
+/***** 2015-10-26 banner *******/
+
+
+
+
+/***** 2015-10-26 banner *******/
+
+/*衡力肉毒素*/
+.banner .DB_imgSet .DB_6_1{position:absolute;left:181px;top:30px;}
+.banner .DB_imgSet .DB_6_2{position:absolute;left:364px;top:87px}
+.banner .DB_imgSet .DB_6_3{position:absolute;left:386px;top:151px}
+.banner .DB_imgSet .DB_6_4{position:absolute;left:302px;top:207px}
+.banner .DB_imgSet .DB_6_5{position:absolute;left:662px;top:206px}
+.banner .DB_imgSet .DB_6_6{position:absolute;left:600px;top:357px}
+
+/*赫本眼*/
+.banner .DB_imgSet .DB_1_1{position:absolute;left:454px;top:64px;}
+.banner .DB_imgSet .DB_1_2{position:absolute;left:582px;top:144px}
+.banner .DB_imgSet .DB_1_3{position:absolute;left:528px;top:297px}
+.banner .DB_imgSet .DB_1_4{position:absolute;left:646px;top:297px}
+.banner .DB_imgSet .DB_1_5{position:absolute;left:764px;top:297px}
+.banner .DB_imgSet .DB_1_6{position:absolute;left:885px;top:297px}
+
+/*Male丰胸品牌新品入驻中翰*/
+.banner .DB_imgSet .DB_2_1{position:absolute;left:107px;top:36px;}
+.banner .DB_imgSet .DB_2_2{position:absolute;left:75px;top:127px}
+.banner .DB_imgSet .DB_2_3{position:absolute;left:75px;top:187px}
+.banner .DB_imgSet .DB_2_4{position:absolute;left:103px;top:248px}
+.banner .DB_imgSet .DB_2_5{position:absolute;left:-49px;top:317px}
+
+/*中翰无痛种植牙*/
+.banner .DB_imgSet .DB_3_1{position:absolute;left:-64px;top:62px;}
+.banner .DB_imgSet .DB_3_2{position:absolute;left:-27px;top:182px}
+.banner .DB_imgSet .DB_3_3{position:absolute;left:-70px;top:279px}
+
+/*中翰注射除皱*/
+.banner .DB_imgSet .DB_4_1{position:absolute;left:-65px;top:81px;}
+.banner .DB_imgSet .DB_4_2{position:absolute;left:34px;top:199px}
+.banner .DB_imgSet .DB_4_3{position:absolute;left:-4px;top:307px}
+.banner .DB_imgSet .DB_4_4{position:absolute;left:-140px;top:193px}
+
+
+/*NIR光波拉皮*/
+.banner .DB_imgSet .DB_5_1{position:absolute;left:-127px;top:69px;}
+.banner .DB_imgSet .DB_5_2{position:absolute;left:-75px;top:197px}
+.banner .DB_imgSet .DB_5_3{position:absolute;left:-112px;top:282px}
+
+/***** 2015-10-26 banner *******/
+
+
+
+/*全球甄选美鼻女王*/
+.banner .DB_imgSet .DB_32_1{position:absolute;left:479px;top:53px;}
+.banner .DB_imgSet .DB_32_2{position:absolute;left:334px;top:108px}
+.banner .DB_imgSet .DB_32_3{position:absolute;left:306px;top:159px}
+.banner .DB_imgSet .DB_32_4{position:absolute;left:177px;top:263px}
+.banner .DB_imgSet .DB_32_5{position:absolute;left:536px;top:305px}
+
+/*国庆-万梓良*/
+.banner .DB_imgSet .DB_31_1{position:absolute;left:408px;top:63px;}
+.banner .DB_imgSet .DB_31_2{position:absolute;left:390px;top:111px}
+.banner .DB_imgSet .DB_31_3{position:absolute;left:498px;top:189px}
+.banner .DB_imgSet .DB_31_4{position:absolute;left:462px;top:237px}
+.banner .DB_imgSet .DB_31_5{position:absolute;left:463px;top:290px}
+
+
+/*无创注射*/
+.banner .DB_imgSet .DB_26_1{position:absolute;left:-11px;top:107px;}
+.banner .DB_imgSet .DB_26_2{position:absolute;left:-132px;top:165px}
+.banner .DB_imgSet .DB_26_3{position:absolute;left:26px;top:270px}
+.banner .DB_imgSet .DB_26_4{position:absolute;left:600px;top:190px}
+
+/*中翰美瞳术*/
+.banner .DB_imgSet .DB_27_2{position:absolute;left:13px;top:98px}
+.banner .DB_imgSet .DB_27_3{position:absolute;left:93px;top:224px}
+.banner .DB_imgSet .DB_27_4{position:absolute;left:55px;top:294px}
+
+/*中翰全鼻美塑*/
+.banner .DB_imgSet .DB_28_1{position:absolute;left:-71px;top:97px;}
+.banner .DB_imgSet .DB_28_2{position:absolute;left:318px;top:100px}
+.banner .DB_imgSet .DB_28_3{position:absolute;left:187px;top:108px}
+.banner .DB_imgSet .DB_28_4{position:absolute;left:-28px;top:247px}
+
+/*中翰·2C双平面动感丰胸*/
+.banner .DB_imgSet .DB_29_1{position:absolute;left:87px;top:76px;}
+.banner .DB_imgSet .DB_29_2{position:absolute;left:-55px;top:117px}
+.banner .DB_imgSet .DB_29_3{position:absolute;left:110px;top:211px}
+.banner .DB_imgSet .DB_29_4{position:absolute;left:127px;top:261px}
+.banner .DB_imgSet .DB_29_5{position:absolute;left:109px;top:309px}
+
+/*中翰·韩式半永久化妆术*/
+.banner .DB_imgSet .DB_30_1{position:absolute;left:527px;top:95px;}
+.banner .DB_imgSet .DB_30_2{position:absolute;left:350px;top:170px}
+.banner .DB_imgSet .DB_30_3{position:absolute;left:408px;top:265px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner .DB_menuWrap{position:absolute;width:1000px;left:50%;margin-left:-500px;}
+.banner .DB_menuWrap .DB_menuSet{position:absolute;width:100%;top:380px;text-align:center;font-size:0}
+.banner .DB_menuWrap .DB_menuSet li{cursor:pointer;margin:0 3px;display:inline}
+.banner .DB_prev{position:absolute;left:-100px;top:180px;cursor:pointer;display:none}
+.banner .DB_next{position:absolute;right:-100px;top:180px;cursor:pointer;display:none}

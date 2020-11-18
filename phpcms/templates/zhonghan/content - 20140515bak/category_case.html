@@ -1,0 +1,80 @@
+{template "content","header"}
+<style type="text/css">
+.aa{position: fixed; top:0px;_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop-185));}
+</style>
+
+<div id="Info_banner" class="I_banner05"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 频道</div>
+</div>
+
+<div class="inside clearfix">
+	<div class="inside_left">
+    	<p class="text_a case_title">{$catname}</p>
+        <div class="mainCon">
+		<ul id="prnav" class="Details_nav clearfix">
+{loop subcat($catid) $v}
+          <li{if $n==1} class="current"{/if} style="width:122px;"><a href="javascript:;">{$v[catname]}</a></li>
+{/loop}
+        </ul>
+{loop subcat($catid) $v}
+        <div id="section-1" class="container" ><!-------------------------{$v[catname]} 开始----------------------->
+			<div class="zt_title txt_right clearfix">
+                <div class="case_box_title">{$v[catname]}</div>
+                <ul class="case_box_list">
+{loop subcat($v[catid]) $s}
+                    <li{if $n==q} class="on"{/if}><a href="#">{$s[catname]}</a></li>
+{/loop}
+                </ul>
+            </div>
+            
+            <div class="zt_info">
+            	<div class="case_width">
+{loop subcat($v[catid]) $s}
+                	<div class="pranli left"><!---{$s[catname]}--->
+                    	<div class="pranli_btn">
+                        	<a class="prev">prev</a>
+                            <a class="next">next</a>
+                        </div>
+                        <div class="pranli_BOX">
+                        	<ul>
+{pc:content action="lists" catid="$s[catid]" order="listorder ASC" moreinfo="1"  num="12" }
+{loop $data $r}
+                            	<li>
+                                	<div class="anliImg_left"><img src="{thumb($r[shuqian],128,155,1)}" width="128" height="155" /><div class="anliTAB_left">术前</div></div>
+                        			<div class="anliImg_right"><img src="{thumb($r[shuhou],128,155,1)}" width="128" height="155" /><div class="anliTAB_right">术后</div></div>
+                                </li>
+{/loop}
+{/pc}
+                            </ul>
+                        </div>
+                    </div>
+{/loop}
+                </div>
+            </div>
+            
+        </div><!-------------------------{$v[catname]} 结束----------------------->
+{/loop}
+        </div>
+        
+        <div class="inside_contact"><div class="inside_contactBth"><a href="/swt/">点击咨询</a></div></div>
+    </div>
+    
+{template "content","inside_right"}
+
+</div>
+
+{template "content","footer"}
+
+<script src="/Files/Scripts/sunlion.scrollTo.js"></script>
+<script src="/Files/Scripts/sunlion.nav.js"></script>
+<script language="javascript">
+$(".case_box_list").tabso({
+		cntSelect:".case_width",
+		tabEvent:"mouseover",
+		tabStyle:"fade",
+		onStyle : "on"
+	});
+</script>
+</body>
+</html>

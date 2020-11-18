@@ -1,0 +1,35 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner03"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+</div>
+
+<div class="inside clearfix">
+	<div class="inside_left">
+    	<p class="inside_title">{$catname}</p>
+{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+{loop $data $r}
+        <div class="yiqi clearfix">
+        	<div class="yiqi_img"><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],190,132,1)}" width="190" height="132" alt="{$r[title]}" /></a></div>
+            <div class="yiqi_text">
+            	<p class="yiqi_title"><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+                <p class="text_em">{str_cut($r[description],300)}<a href="{$r[url]}" target="_blank" class="text_a">[详情]</a>
+                </p>
+            </div>
+        </div>
+{/loop}     
+        <!--<div class="digg"><a href="#">《上一页</a> </span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a><a href="#?page=6">6</a><a href="#?page=7">7</a><a href="#?page=2">下一页》</a></div>-->
+{/pc}
+        
+        <div class="inside_contact"><div class="inside_contactBth"><a href="/swt/">点击咨询</a></div></div>
+    </div>
+
+{template "content","inside_right"}
+
+</div>
+
+{template "content","footer"}
+
+</body>
+</html>

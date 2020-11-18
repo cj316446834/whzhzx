@@ -1,0 +1,180 @@
+{template "content","header"}
+<link href="/Files/Style/dtnav.css" type="text/css" rel="stylesheet">
+<div id="Info_banner" class="I_banner01"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)}</div>
+</div>
+
+<div class="main clearfix">
+	<div class="inside_sub">
+    	<div class="inside_subnav">
+        	<div class="inside_navtitle"><p class="inside_title_Ch">品牌中心</p><p class="inside_title_Ko">메 인 화면</p></div>
+            <div class="inside_nav">
+            	<ul>
+{loop subcat(1) $v}
+                	<li{if $catid==$v[catid]}  class="on"}{/if}><a href="{$CATEGORYS[$v[catid]][url]}">{$CATEGORYS[$v[catid]][catname]}</a></li>
+{/loop}
+            	</ul>
+            </div>
+            <div class="inside_SUBconsult">
+            	<p>美丽热线</p>
+                <p class="font_22">027-87866888</p>
+                <p class="m_b15">门诊时间 8:00-21:00</p>
+                <div class="consultBth"><a href="/swt/">在线咨询</a></div>
+            </div>
+        </div>
+        <div class="inside_subBOX"></div>
+    </div>
+    <div class="inside_main">
+    	<p class="inside_rightTit">网站地图</p>
+        <div class="inside_info">
+            <div class="wzdt">
+			<div class="ppzx bb_S">
+			<h3><a href="{$CATEGORYS[12][url]}" target="_blank">品牌中心：</a></h3>
+			<dl>
+				
+				<dd class="cl">
+				{pc:content action="category" catid="1" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+					<a href="{$r[url]}" target="_blank">{$r[catname]}</a>
+{/loop}
+{/pc}	
+				</dd>
+			</dl>
+			</div>
+			<div class="zxmr xmzx bb_S">
+			{loop subcat(2) $v}
+			<h3><a href="{$v[url]}" target="_blank">{$v[catname]}：</a></h3>
+			<dl>
+			    {pc:content action="category" siteid="1" catid="$v[catid]"}
+				{loop $data $n $r}
+				{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+				{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+				{if $data}
+				{loop $data $t}
+			    <dt><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dt>
+				{/loop}
+				{else}
+				<dd class="cl"><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dd>
+				{/if}
+				{/pc}
+				{/loop}
+				{/pc}
+			</dl>
+			{/loop}
+			</div>
+			<div class="pfmr xmzx bb_S">
+			{loop subcat(3) $v}
+			<h3><a href="{$v[url]}" target="_blank">{$v[catname]}：</a></h3>
+			<dl>
+			    {pc:content action="category" siteid="1" catid="$v[catid]"}
+				{loop $data $n $r}
+				{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+				{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+				{if $data}
+				{loop $data $t}
+			    <dt><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dt>
+				{/loop}
+				{else}
+				<dd class="cl"><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dd>
+				{/if}
+				{/pc}
+				{/loop}
+				{/pc}
+			</dl>
+			{/loop}
+			</div>
+			<div class="wzxmr xmzx bb_S">
+			{loop subcat(4) $v}
+			<h3><a href="{$v[url]}" target="_blank">{$v[catname]}：</a></h3>
+			<dl>
+			    {pc:content action="category" siteid="1" catid="$v[catid]"}
+				{loop $data $n $r}
+				{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+				{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+				{if $data}
+				{loop $data $t}
+			    <dt><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dt>
+				{/loop}
+				{else}
+				<dd class="cl"><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dd>
+				{/if}
+				{/pc}
+				{/loop}
+				{/pc}
+			</dl>
+			{/loop}
+			</div>
+			<div class="kqmr xmzx bb_S">
+			{loop subcat(5) $v}
+			<h3><a href="{$v[url]}" target="_blank">{$v[catname]}：</a></h3>
+			<dl>
+			    {pc:content action="category" siteid="1" catid="$v[catid]"}
+				{loop $data $n $r}
+				{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+				{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+				{if $data}
+				{loop $data $t}
+			    <dt><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dt>
+				{/loop}
+				{else}
+				<dd class="cl"><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dd>
+				{/if}
+				{/pc}
+				{/loop}
+				{/pc}
+			</dl>
+			{/loop}
+			</div>
+			<div class="kslmr xmzx bb_S">
+			<h3><a href="{$CATEGORYS[13][url]}" target="_blank">精彩专题：</a></h3>
+			<div class="cl">
+			{pc:content action="category" catid="13"  siteid="$siteid" order="listorder ASC"}
+			{loop $data $r}
+			<a href="{$r[url]}" target="_blank">{$r[catname]}</a>
+			{/loop}
+			{/pc}	
+			</div>
+			</div>
+			
+			<div class="kqmr xmzx bb_S">
+			{loop subcat(14) $v}
+			<h3><a href="{$v[url]}" target="_blank">{$v[catname]}：</a></h3>
+			<dl>
+			    {pc:content action="category" siteid="1" catid="$v[catid]"}
+				{loop $data $n $r}
+				{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+				{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+				{if $data}
+				{loop $data $t}
+			    <dd><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dd>
+				{/loop}
+				{else}
+				<dt class="cl"><a href="{$t[url]}" target="_blank">{$r[catname]}</a></dt>
+				{/if}
+				{/pc}
+				{/loop}
+				{/pc}
+			</dl>
+			{/loop}
+			</div>
+			
+			<div class="kslmr xmzx bb_S">
+			<h3><a href="{$CATEGORYS[17][url]}" target="_blank">新闻中心：</a></h3>
+			</div>
+			
+			<div class="kslmr xmzx bb_S">
+			<h3><a href="{$CATEGORYS[44][url]}" target="_blank">问答中心：</a></h3>
+			</div>
+			
+			
+			</div>
+        </div>
+        <div class="inside_contact"><div class="inside_contactBth"><a href="/swt/">点击咨询</a></div></div>
+    </div>
+</div>
+
+{template "content","footer"}
+
+</body>
+</html>

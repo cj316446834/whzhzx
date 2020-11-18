@@ -1,0 +1,31 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner04"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 正文</div>
+</div>
+<!---------------视频播放--------------->
+<div class="video_info">
+<p class="font_22 b black m_b15">{$title}</p>
+{php $video=string2array($rs['video_url'])}
+{loop $video $r}
+<a href="{$r[fileurl]}" id="player"></a></div>
+{/loop}
+
+{template "content","footer"}
+
+<script type="text/javascript" src="/Files/Scripts/flowplayer-3.2.13.min.js"></script>
+<script type="text/javascript">
+flowplayer( 
+    "player",  
+    "/flowplayer-3.2.17.swf",{ 
+      clip: { 
+       
+        autoPlay: false,  
+        autoBuffering: true  
+      } 
+    } 
+); 
+</script>
+</body>
+</html>

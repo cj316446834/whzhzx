@@ -1,0 +1,74 @@
+    <div class="inside_right">
+	
+    	<div class="inside_right_ad">
+        	<div class="adBth">
+            	<ul>
+{pc:content action="position" posid="3" order="listorder DESC" num="6"}
+{loop $data $r}
+                	<li>{$n}</li>
+{/loop}
+{/pc}
+                </ul>
+            </div>
+            <div class="inside_adBox">
+                <ul>
+{pc:content action="position" posid="3" order="listorder DESC" num="6"}
+{loop $data $r}
+                    <li><a href="{$r[url]}" target="_blank" title="{$r[title]}"><img alt="{$r[title]}" src="{thumb($r[thumb],260,338,1)}" width="260" height="338" /></a></li>
+{/loop}
+{/pc}
+                </ul>
+            </div>
+        </div>
+
+        <div class="inside_Xm">
+        	<div class="inside_right_title">经典项目</div>
+            <div class="inside_Xminfo clearfix">
+            	<ul>
+{pc:block pos="jingdian"}{/pc}
+                </ul>
+            </div>
+        </div>
+        <div class="inside_zj">
+        	<div class="inside_right_title">专家推荐</div>
+            <div class="inside_zjInfo">
+            	<div class="inside_zjlist">
+                	<ul>
+{pc:content action="position" posid="4" order="listorder ASC" num="6"}
+{loop $data $r}
+                    	<li><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],258,307,1)}" width="258" height="307"  alt="{$r[title]}" /><span class="font_18 black">{$r[title]}</span><br /><span class="post">({$r[zj_zyzc]})</span></a></li>
+{/loop}
+{/pc}
+                    </ul>
+                </div>
+                <div class="zjbth clearfix">
+                	<ul><li>1</li><li>2</li><li>3</li><li>4</li></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="inside_zj">
+        	<div class="inside_right_title">资讯推荐</div>
+            <div class="inside_tj">
+			{pc:content action="hits" catid="$catid" num="6" order="views DESC" cache="3600"}
+            	<ul>
+<!--
+<script type="text/javascript" src="/index.php?m=dbsource&c=call&a=get&id=1"></script>
+-->
+                  {loop $data $r}
+					<li><em></em><a href="{$r[url]}">{str_cut($r[title],55,…)}</a></li>
+				{/loop}
+
+
+                </ul>
+			{/pc}
+            </div>
+        </div>
+        
+        <div class="inside_zixun">
+        	<p>美丽热线</p>
+            <p class="font_22">{my_c('tel')}</p>
+            <p class="m_b10">门诊时间 8:00-20:00</p>
+            <div class="consultBth"><a href="/swt/">在线咨询</a></div>
+        </div>
+    </div>

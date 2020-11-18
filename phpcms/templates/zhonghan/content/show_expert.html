@@ -1,0 +1,67 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner06"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 资料</div>
+</div>
+
+<div class="inside clearfix">
+	<div class="video_left">
+    	<div class="video_top">
+        	<p class="case_title text_a">专家详细资料</p>
+            <div class="expert_infoTop">
+            	<div class="expert_infoTop_Img"><img src="{thumb($thumb,218,260,1)}" width="218" height="260" alt="{$title}" /></div>
+                <div class="left m_l20">
+                	<p class="font_16 b"><span class="text_a">{$title}</span>&emsp;<span>{$zj_zyzc}</span></p>
+                    <p class="m_t10 l_h25">
+                        {$nl2br($zj_xxzc)}
+                    </p>
+                    <p class="m_t20"><span class="zx_btn left"><a href="/swt/">我要提问</a></span><span class="zx_btn left m_l20"><a href="/swt/"><em></em><span class="zx_p">专家预约</span></a></span></p>
+                </div>
+            </div>
+		</div>
+        <div class="video_BOX">
+        	{$content}
+        </div>
+        
+        <div class="inside_contact"><div class="inside_contactBth01"><a href="/swt/">点击咨询</a></div><div class="inside_contactBth02"><a href="/swt/">专家预约</a></div></div>
+        
+        <div class="wz_Next_Prev">
+        	<ul>
+            	<li class="left">上一位：<a href="{$previous_page[url]}">{$previous_page[title]}</a></li>
+                <li class="right txt_right">下一位：<a href="{$next_page[url]}">{$next_page[title]}</a></li>
+            </ul>
+        </div>
+        <div class="wz_box">
+        	<div class="wz_yuedu">
+            	<dl class="wz_list">
+                	<dt>相关延伸阅读</dt>
+{pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+{loop $data $r}
+                    <dd><a href="{$r[url]}"><em></em>{$r[title]}</a></dd>
+{/loop}
+{/pc}
+                </dl>
+            </div>
+            <div class="left m_l20">
+            	<dl class="wz_list">
+                	<dt>热点推荐</dt>
+                    <dd><a href="#"><em></em>做双眼皮多少钱</a></dd>
+                    <dd><a href="#"><em></em>割双眼皮多久恢复</a></dd>
+                    <dd><a href="#"><em></em>做韩式双眼皮医院哪家好?</a></dd>
+                    <dd><a href="#"><em></em>压双眼皮是怎么做的</a></dd>
+                    <dd><a href="#"><em></em>双眼皮下垂怎么办</a></dd>
+                </dl>
+           </div>     
+        </div>
+        
+    </div>
+    
+{template "content","inside_right"}
+
+</div>
+
+{template "content","footer"}	  
+
+</body>
+</html>

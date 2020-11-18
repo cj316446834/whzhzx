@@ -1,0 +1,57 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner02"   style="background:url(/Files/Images/info_banner/{$CATEGORYS[$top_parentid][catid]}_317.jpg) center top no-repeat;
+"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 频道</div>
+</div>
+
+<div class="inside clearfix">
+	<div class="inside_left">
+    	<p class="inside_title">{$catname}</p>
+        <div class="inside_leftBox clearfix">
+{loop subcat($catid) $v}
+        	<div class="inside_ProjectBox02"><!-----{$v[catname]} 开始----->
+            	<div class="inside_prBoxtop">
+{php $catids = $v[catid]}
+{php $sunlion = "`catid` in($catids) AND `xm`='1'"}
+{pc:content action="lists" catid="$v[catid]" where="$sunlion" order="id DESC" num="1"}
+{if $data}
+{loop $data $r}
+                	<div class="inside_prBoxImg"><a href="{$r[url]}"><img src="{thumb($r[thumb],112,132,1)}" width="112" height="132" alt="{$v[catname]}" /></a></div>
+                    <div class="inside_prBoxText">
+                    	<p class="txt_center b black font_14 m_t10"><a href="{$r[url]}">{$v[catname]}</a></p>
+                        <p class="text_em l_h20 m_t10">{str_cut($r[description],160)}<a href="{$r[url]}" class="text_a">[详情]</a></p>
+                    </div>
+{/loop}
+{else}
+                	<div class="inside_prBoxImg"><a href="{$v[url]}"><img src="{thumb($v[image],112,132,1)}" width="112" height="132" alt="{$v[catname]}" /></a></div>
+                    <div class="inside_prBoxText">
+                    	<p class="txt_center b black font_14 m_t10"><a href="{$r[url]}">{$v[catname]}</a></p>
+                        <p class="text_em l_h20 m_t10">{str_cut($v[description],160)}<a href="{$v[url]}" class="text_a">[详情]</a></p>
+                    </div>
+{/if}
+{/pc}
+                </div>
+                <ul class="inside_prlist m_t10">
+{php $sunlion = "`catid` in($catids) AND `xm`='0'"}
+{pc:content action="lists" catid="$v[catid]" where="$sunlion" order="id DESC" num="3"}
+{loop $data $v}
+                	<li><a href="{$v[url]}" target="_blank"{title_style($v[style])}>{$v[title]}</a></li>
+{/loop}
+{/pc}
+                </ul>
+            </div><!-----{$v[catname]} 结束----->
+{/loop}
+        </div>
+        <div class="inside_contact"><div class="inside_contactBth01"><a href="/swt/">点击咨询</a></div><div class="inside_contactBth02"><a href="/swt/">专家预约</a></div></div>
+    </div>
+    
+{template "content","right_kq"}
+
+</div>
+
+{template "content","footer"}
+
+</body>
+</html>

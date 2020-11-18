@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商务通右侧</title>
+<script type="text/javascript" src="http://www.whzhzxmr.com/Files/Scripts/jquery-1.8.1.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.pcyy.cn/templates/protostar/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="http://www.pcyy.cn/templates/protostar/css/font-awesome.min.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script>!window.jQuery && document.write('<script src="/Files/scripts/html5.js"><\/script>');</script>
+<![endif]-->
+
+
+<!--[if IE 6]>
+<script src="/Files/scripts/minmax.js"></script>
+<script src="/Files/scripts/DD_belatedPNG_0.0.8a-min.js"></script>
+
+<script>
+DD_belatedPNG.fix('.png,.png img,img,background');
+</script>
+<![endif]-->
+
+
+</head>
+
+<body>
+<style>
+/*侧边栏aside*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; font-family:"微软雅黑";}
+.text-align{ text-align:center;}
+img{ border:none;}
+.pull-right {
+	float:right
+}
+.pull-left {
+	float:left
+}
+.fa {
+	display:inline-block;
+	font-family:FontAwesome;
+	font-style:normal;
+	font-weight:normal;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+.fa.pull-left {
+	margin-right:.3em
+}
+.fa.pull-right {
+	margin-left:.3em
+}
+
+.weixin .pull-left{ color:#663181;}
+#aside{width: 60px; position:fixed; top:20%; z-index:99999;right: 20px;}
+#aside .wrap{ position:relative; width: 72px; padding-top: 8px;overflow: hidden;}
+#aside .right{width: 60px; height: 60px; background:#663181;position: relative; z-index: 20;border-radius:3px 0px 0px 3px ;-moz-border-radius:3px 0px 0px 3px ;-ms-border-radius:3px 0px 0px 3px ;-o-border-radius:3px 0px 0px 3px ;-webkit-border-radius:3px 0px 0px 3px;}
+#aside .wrap:hover .right{ background:#512766;}
+#aside .right img{padding: 15px 0 0 15px;}
+#aside .left{opacity: 0;filter: alpha(opacity=0);width: 121px; height: 60px; background:#fff; position:absolute; left: -80px; top: 8px; border-right:2px solid #663181; padding-right: 15px; padding-top: 15px;-moz-box-shadow: -1px 0px 3px #BBBBBB;-webkit-box-shadow: -1px 0px 3px #BBBBBB;box-shadow: -1px 0px 3px #BBBBBB;}
+#aside .call{width: 214px;left: -100px;left: -20px;}
+#aside .call .form-control{width: 140px;border-radius: 0px;height: 30px; margin-left: 14px; border: 1px solid #e5e5e5; background-color: #f9f9f9;}
+#aside .call a{display: block; color: #663181;width: 30px;font-weight: bold;}
+#aside .callbtn{line-height: 120%; padding-left: 10px;}
+#aside .weixin{width: 150px;height: 120px;left: -80px; padding-top:0px;}
+#aside .weixin img{padding: 5px 0 0 5px;}
+#aside .weixin .text{width: 18px;line-height: 120%; padding: 2px 0 0 5px;}
+#aside .back_top{background: #222222;}
+#aside .back_top i{font-size: 38px; display: block; padding-top: 10px; color: #fff;}
+#aside .left h2{font-size: 14px; color:#663181; font-weight: bold;}
+#aside .left p{ font-size: 12px; color:#999999;}
+#aside .triangle{opacity: 0;
+  filter: alpha(opacity=0);position: absolute;left: 0px;top: 33px;border-color: transparent transparent transparent #663181;border-style: solid;border-width: 4px 0px 4px 4px;width: 0;height: 0;}
+/*end侧边栏aside*/
+</style>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<!-- 商务通右侧 -->
+ <section id="aside">
+    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin');" target="_blank">
+      <div class="wrap clearfix">
+        <div class="right trs pull-right">
+          <img src="images/aside_zixun.png" alt="咨询">
+        </div>
+        
+        <div class="left" dis="-121px">
+          <h2 class="pull-right">在线咨询</h2>
+          <p class="pull-right">25人正在咨询</p>
+        </div>
+        
+        <div class="triangle"></div>
+        
+      </div>
+    </a>
+    <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800049518&cref=www.whzhzxmr.com&ref=&pt=&f=1&ty=1&ap=&as=" target="_blank">
+      <div class="wrap clearfix">
+        <div class="right pull-right">
+          <img src="images/aside_qq.png" alt="咨询">
+        </div>
+        <div class="left" dis="-121px">
+          <h2 class="pull-right">QQ交谈</h2>
+          <p class="pull-right">QQ:800049518</p>
+        </div>
+        <div class="triangle"></div>
+        
+      </div>
+    </a>
+    
+    <div class="wrap clearfix">
+      <div class="right pull-right">
+        <img src="images/aside_phone.png" alt="咨询">
+      </div>
+      <div class="left call" dis="-214px">
+        <input type="text" class="form-control pull-left" placeholder="留下您的电话">
+        <div class="callbtn pull-left"><a href="javascript:void(0)" onclick="openZoosUrl('chatwin');" target="_blank">免费回电</a></div>
+      </div>
+      <div class="triangle"></div>
+      
+    </div>
+    
+    <a href="javascript:void(0)" onclick="openZoosUrl('chatwin');" target="_blank">
+      <div class="wrap clearfix">
+        <div class="right pull-right">
+          <img src="images/aside_weixin.png" alt="咨询">
+        </div>
+        <div class="left weixin" dis="-150px">
+          <img class="pull-left" src="images/aside_weixin.jpg" alt="微信">
+          <div class="text pull-left text-center">扫一扫 • 加关注</div>
+        </div>
+        <div class="triangle"></div>
+        
+      </div>
+    </a>
+    
+    <div class="wrap clearfix">
+      <div class="right pull-right back_top">
+        <i class="fa fa-chevron-up text-center"></i>
+      </div>
+    </div>
+  </section>
+  <!-- end 商务通 -->
+
+
+<script>
+$(function(){
+	$('#aside .wrap').mouseenter(function(){
+			$(this).css('overflow','visible');
+			$(this).find('.left').stop().animate({'left':$(this).find('.left').attr('dis'),'opacity':'1'},200,function(){
+				$(this).parent().find('.triangle').stop().animate({'opacity':'1'},150)});
+	})
+	$('#aside .wrap').mouseleave(function(){
+				var _this=$(this);
+				$(this).find('.left').css('opacity','0.3');
+				$(this).parent().find('.triangle').css('opacity','0');
+				$(this).find('.left').stop().animate({'left':'-80px','opacity':'0'},300,function(){
+					_this.css('overflow','hidden');
+				});
+				$(this).parent().find('.triangle').stop().animate({'opacity':'0'},50);
+	})
+	$('.back_top').click(function(){
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+				$(document.documentElement).animate({scrollTop:0},800);
+				$(document.body).animate({scrollTop:0},800);
+	})
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner06"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+</div>
+
+<div class="expert_slide">
+<script type="text/javascript" src="/index.php?m=dbsource&c=call&a=get&id=2"></script>
+</div>
+
+<div class="expert_main clearfix">
+{pc:content action="lists" catid="$catid" moreinfo="1" num="25" order="listorder ASC" page="$page"}
+{loop $data $r}
+	<div class="expertBox">
+    	<div class="expertBox_img">
+        	<img src="{thumb($r[thumb],306,364,1)}" width="306" height="364">
+            <div class="expertBox_Hide">
+            	<p class="font_14 b">专家简介：</p>
+                <p class="text_em m_t10">{$nl2br($r[description])}</p>
+                <p class="font_14 b m_t20">擅长项目：</p>
+                <p class="text_em m_t10">{$nl2br($r[zj_scxm])}</p>
+            </div>
+        </div>
+        <div class="expertBox_info">
+        	<p class="txt_center"><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+            <p class="txt_center font_14 black2">{$r[zj_zyzc]}</p>
+            <ul class="expertBox_info_list">
+            	<li class="left"><a href="{$r[url]}" target="_blank">专家详细资料</a></li>
+                <li class="right"><a href="/swt/">预约挂号</a></li>
+            </ul>
+        </div>
+    </div>
+{/loop}
+{/pc}
+</div>
+
+{template "content","footer"}
+
+<script type="text/javascript">
+jQuery(".expert_slide").slide({ mainCell:".bd ul",effect:"topLoop",autoPlay:true });
+
+$(document).ready(function(){
+		$(".expertBox_img").hover(function(){
+			$(this).find('.expertBox_Hide').stop().animate({left:'0'},500);
+		},
+		function(){	
+			$(this).find('.expertBox_Hide').stop().animate({left:'-306px'},500);
+		});
+	});
+</script>
+		  
+
+</body>
+</html>

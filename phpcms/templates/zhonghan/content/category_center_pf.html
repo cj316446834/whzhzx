@@ -1,0 +1,46 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner02" style="background:url(/Files/Images/info_banner/{$CATEGORYS[$top_parentid][catid]}_317.jpg) center top no-repeat;
+}"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 频道</div>
+</div>
+
+<div class="inside clearfix">
+	<div class="inside_left">
+    	<div class="inside_leftBox clearfix">
+{loop subcat($catid) $v}
+        	<div class="inside_ProjectBox"><!-------{$v[catname]} 开始------>
+            	<p class="inside_prTitle"><span class="left">{$v[catname]}</span><a href="{$v[url]}">+MORE</a></p>
+                <div class="inside_prDT">
+                	<p><a href="{$v[url]}"><img src="{thumb($v[image],338,100,1)}" width="338" height="100" alt="{$v[catname]}" /></a></p>
+                    <p class="text_em l_h20 m_t5">{str_cut($v[description],210)}<a href="{$v[url]}" class="text_a">[详情]</a></p>
+                </div>
+                <ul class="inside_prlist">
+{pc:content action="lists" catid="$v[catid]" num="3" order="id DESC"}
+{loop $data $t}
+                	<li><a href="{$t[url]}" target="_blank"{title_style($t[style])}>{$t[title]}</a></li>
+{/loop}
+{/pc}
+                </ul>
+                <p class="inside_prSUB">
+{loop subcat($v[catid]) $s}
+{if $n<4}
+                	<a href="{$s[url]}">{$s[catname]}</a>
+{/if}
+{/loop}
+                </p>
+            </div><!-------{$v[catname]} 结束------>
+{/loop}
+        </div>
+        <div class="inside_contact"><div class="inside_contactBth01"><a href="/swt/">点击咨询</a></div><div class="inside_contactBth02"><a href="/swt/">专家预约</a></div></div>
+    </div>
+    
+{template "content","right_pf"}
+
+</div>
+
+{template "content","footer"}
+
+</body>
+</html>

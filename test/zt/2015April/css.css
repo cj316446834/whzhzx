@@ -1,0 +1,151 @@
+/* CSS Document */
+body {margin:0px; padding:0px; font-size:16px; font-family:Microsoft YaHei; color:#333}
+dl,dt,dd,ul,li,p,h1,h2,h3,h4,h5,h6 {margin:0px; padding:0px; list-style-type:none}
+img {border:0px; }
+.clear {clear:both; height:-1px}
+a {text-decoration:none}
+.box {width:100%;}
+.box dl {width:1140px; margin:0px auto}
+.box dl dt {margin-top:30px; text-align: center; font-size:30px; color:#5e312b; background:url(images/boxdtbg.gif) bottom no-repeat; padding-bottom:20px}
+.wrap{width: 1280px; margin: 0 auto;}
+
+.banner{width: 100%; height: 700px;}
+.banner01{width: 100%; height: 206px; background: url(images/banner1.jpg) no-repeat;}
+.banner02{width: 100%; height: 180px; background: url(images/banner2.jpg) no-repeat;}
+.banner03{width: 100%; height: 314px; background: url(images/banner3.jpg) no-repeat; overflow: hidden;}
+.bannerBth a{width:252px;height:62px; background: url(images/bannerBth.png) no-repeat; background-position:0 0; display: block; margin: 174px 0 0 742px;}
+.bannerBth a:hover{background-position:-252px 0;}
+
+.xz{width: 1280px; height: 440px; margin: 50px 0;}
+.xzht{width: 340px; height: 440px; background: url(images/xzht.jpg) no-repeat; float: left;}
+.xz6{width: 920; float: left; margin-left: 20px;}
+
+.hd{width: 1300px; margin-top: 10px;}
+.hd li{width: 196px; height: 155px; float: left; margin-right: 21px; position: relative; z-index: 0;}
+.xmhd1, .xmhd2, .xmhd3, .xmhd4, .xmhd5, .xmhd6{width: 196px; height: 155px; background: url(images/xmhd.jpg) no-repeat;}
+.xmhd1{background-position:0 0;}
+.xmhd2{background-position:-216px 0;}
+.xmhd3{background-position:-432px 0;}
+.xmhd4{background-position:-648px 0;}
+.xmhd5{background-position:-864px 0;}
+.xmhd6{background-position:-1084px 0;}
+.xmbtn{width: 196px; height: 40px; position: absolute; top: 155px; z-index: 1; display: none;}
+.xmbtn a{width: 196px; height: 40px; background: #8e5444; line-height: 40px; color: #fff; display: block; text-align: center;}
+.xmbtn a:hover{background: #a96957; transition:all .6s ease-in-out;}
+
+.block { margin-top:30px;}
+.block dl {width:1280px; margin:0px auto}
+.block dl dt { background:url(images/t-bj.jpg) no-repeat bottom; padding-bottom:23px; color:#272b40; text-align:center; font-size:30px}
+.block1 dl dd {margin-top:20px}
+.block1 dl dd ul {float:left; width:270px; margin-right:65px; position:relative}
+.block1 .marnone {margin-right:0px}
+.block1 dl dd ul h6 {position: absolute; width:180px; left:45px; cursor:pointer }
+.block1 dl dd ul h6 p {position:relative}
+.block1 dl dd ul h6 p i { background:#000; position:absolute; width:100%; height:100%;border-radius:90px; opacity:0; filter: Alpha(opacity=0);   transition:opacity 0.8s; }
+.block1 dl dd ul h6:hover p i {opacity:0.7; filter: Alpha(opacity=70); -webkit-animation:fadeInDown5 2s linear infinite;
+	-moz-animation:fadeInDown5 2s linear infinite;
+	-o-animation:fadeInDown5 2s linear infinite;
+	animation:fadeInDown5 2s linear infinite;}
+.block1 dl dd ul h6 p i img { margin-left:61px; margin-top:62px; }
+.block1 dl dd ul li { border-top:1px solid #cecece;border-bottom:1px solid #cecece; margin-top:90px; background:#cccccc}
+.block1 dl dd ul li p {background:url(images/box1xw.png); border-top:1px solid #fff;border-bottom:1px solid #fff; padding:110px 20px 30px 20px; color:#000; line-height:28px; font-size:14px; font-family:'宋体'; text-align:center; height:145px;}
+.block1 dl dd ul li p b {font-size:20px; font-family:Microsoft YaHei; display:block}
+
+.block2 {background:url(images/sbt.jpg) center no-repeat; height:435px; margin-top:30px}
+.block2 .div02{width: 1280px; margin: 0 auto;}
+.block2 .text2 {width: 857px; padding:155px 0 0 393px; color:#542f25; line-height:30px}
+
+
+.block3 dl {width:920px;}
+/*.block3 dl dd {margin-top:20px}*/
+.block3 dl dd h4 { width:200px; float:left; font-weight:100}
+.block3 dl dd h4 li {margin-bottom:10px; height:140px; cursor:pointer}
+.block3 dl dd h4 li p {width:198px; height:138px; float:left; border:1px solid #8e5444; color:#8e5444; font-size:20px; line-height:138px}
+.block3 dl dd h4 li p b {display:block; width:24px; height:24px; background:#8e5444; color:#fff; border-radius:12px; line-height:22px; text-align:center; margin-top:57px; }
+.block3 dl dd h4 li p font { width:100px}
+.block3 .tabright li span {background-position:0px 0px}
+.block3 .tableft li p b {float:left; margin-left:38px; }
+.block3 .tableft li p font {margin-left:10px; float:left;}
+.block3 .tabright li p b {float:right; margin-right:38px}
+.block3 .tabright li p font {margin-right:10px; float:right; text-align:right}
+.block3 dl dd ul {width:458px; height: 408px; padding: 10px 20px 20px 20px; float:left; margin:0px 10px; border:1px solid #8e5444; background:#f5f5f5; display:none}
+.block3 dl dd ul span { display:block;}
+.block3 dl dd ul li { font-size:14px; color: #8e5444; line-height:22px; float:left; margin-top:5px; height:66px}
+.block3 dl dd ul li b {margin-top:15px; font-size:16px; }
+
+.block3 .tabactive p {color:#fff; background:#8e5444;  border:1px solid #8e5444}
+.block3 .tabactive b {color:#8e5444; background:#fff;}
+
+
+
+.block4 dl {width:1280px; margin:0px auto}
+.block4 dl dt {background:url(images/t-bj.jpg) bottom center no-repeat; padding-top:20px; color:#333 }
+.block4 dl dd {margin-top:30px; background:url(images/2_03.jpg) center top no-repeat; padding-top:10px}
+.block4 dl dd ul {float:left; margin-left:15px; width:335px; height:100px; margin-top:40px}
+.block4 .marnone {margin-top:0px}
+.block4 .rig {margin-left:590px}
+.block4 dl dd ul h4 {font-size:24px; padding-bottom:5px; font-weight:100; color:#8e5444;}
+.block4 dl dd ul p {line-height:180%; font-size:14px; font-family:'宋体'; color: #666;}
+
+.block .fousbut {width:1240px; margin:0px auto; position:relative}
+#focus {width:1140px; height:520px; overflow:hidden; position:relative; margin:0px auto; margin-top:20px}
+.fo { height:520px; position:absolute}
+#focus ul li {float:left; width:1140px; overflow:hidden; position:relative; }
+#focus ul li img {border: #8e5444 solid 1px; }
+#focus ul div {position:absolute; overflow:hidden;}
+.fousbut .btnBg {position:absolute; width:240px; height:20px; left:0; bottom:0;  display:none}
+.fousbut .btn {position:absolute; width:220px; height:10px; padding:5px 10px; right:0; bottom:0; text-align:right; display:none}
+.fousbut .btn span {display:inline-block; _display:inline; _zoom:1; width:15px; height:10px; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+.fousbut .btn span.on {background:#fff;}
+.fousbut .preNext {width:34px; height:59px; position:absolute; top:260px; background:url(images/sprite.png) no-repeat 0 0; cursor:pointer; z-index:3;}
+.fousbut .pre {left:0;}
+.fousbut .next {right:0; background-position:right top; }
+
+.block6 dl dd ul {width:547px; border:1px solid #8e5444; margin-top:42px}
+.block6 .marnone { margin-left:0px}
+.block6 dl dd ul:hover li {background:#fff; border:5px solid #8e5444;   }
+.block6 dl dd ul li { background:#fcf9ee; border:5px solid #fcf9ee;  padding:20px 23px 25px 37px; height:193px}
+.block6 dl dd ul li h5 { width:152px; float:left}
+.block6 dl dd ul li p {padding-left:24px; width:300px; float:left; padding-top:10px}
+.block6 .por {margin-top:35px}
+.block6 dl dd ul li p b {font-weight:100; color:#5b5b5b; font-size:14px;font-family:'宋体'; line-height:24px; margin:10px 0px; display:block}
+.block6 dl dd ul li h5 a {display:block; width:110px; background:url(images/box6but.png); height:30px; margin-top:10px; margin-left:18px}
+.block6 dl dd h6 {background:url(images/box3img1.gif); width:42px; height:199px; float:left}
+
+
+.zj{width: 100%; height: 599px; margin-top: 100px; background: url(images/zhuanjia.jpg) no-repeat;}
+
+.mainbox {
+    overflow: hidden;
+    position: relative;
+}
+.flashbox {
+    overflow: hidden;
+    position: relative;
+}
+
+.btna a{width:225px;height:50px; margin: 30px auto; background: url(images/btn.jpg)no-repeat ; background-position:0 0; cursor: pointer; display: block;}
+.btna a:hover{background-position:-226px 0;}
+
+#head{width:100%; height:90px; background:#3c1e02;}
+.main{width:1000px; margin:0 auto;}
+.logo a{width:364px; height:49px; margin-top:20px; float:left; background: url(images/logo.png)no-repeat; text-indent:-99999em; display:block;}
+.nav{float:right; line-height:60px; font-family:“宋体”; }
+.nav li{ margin:15px 15px; float:left;}
+.nav li a{color:#fff;}
+.nav li a:hover{color:#f5f5f5; text-decoration:underline;}
+.head-zz{width:100%; height:6px; background:url(images/head-projection.png); position:absolute; top:90px;}
+
+
+@keyframes fadeInDown5 {
+	0% {transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+	100% {transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes fadeInDown5 {
+	0% {transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+	100% {transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+}
+@-webkit-keyframes fadeInDown5 {
+	0% {transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+	100% {transform:rotate(360deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+}

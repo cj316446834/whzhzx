@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="robots" content ="all">
+<meta name="author" content="whzhzxmr" />
+<meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script>!window.jQuery && document.write('<script src="/Files/scripts/html5.js"><\/script>');</script>
+<![endif]-->
+<link href="/Files/Style/global.css" type="text/css" rel="stylesheet">
+<link href="/Files/Style/Layout.css" type="text/css" rel="stylesheet">
+<link href="/Files/Style/fancybox.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/Files/Style/newindex.css" />
+<link rel="stylesheet" href="/index_banner/bannerCSS.css">
+<!--[if IE 6]>
+<script src="/Files/scripts/minmax.js"></script>
+<script src="/Files/scripts/DD_belatedPNG_0.0.8a-min.js"></script>
+
+<script>
+DD_belatedPNG.fix('.png,.png img,img,background');
+</script>
+<![endif]-->
+<script type="text/javascript" src="/Files/Scripts/jquery-1.8.1.js"></script>
+</head>
+<body>
+<div id="top">
+	<div style="width:1200px; margin:0 auto;">
+    	<div class="left">
+        	 <div class="top_acTitle">最新消息</div>
+             <div class="top_infolist">
+             	<ul>
+{pc:content action="position" posid="1" order="listorder ASC" num="3"}
+{loop $data $r}
+                	<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+{/loop}
+{/pc}
+                </ul>
+             </div>
+        </div>
+        <div class="top_right">
+        	<ul>
+        		<li><a href="{my_c('weibo')}" target="_blank" rel="nofollow">官方微博</a></li><li class="top_phone">{my_c('tel')}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="head">
+	<div  style="width:1200px; margin:0 auto;">
+    	<div class="logo"><a href="{siteurl($siteid)}" title="武汉中翰整形美容医院" >武汉中翰整形美容医院</a></div>
+        <nav>
+        	<ul class="navlist" id="nav">
+{pc:content action="category" catid="0" num="5" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+        	    <li>
+                	<a href="{$r[url]}">
+                		<div class="txt_center left"><p class="nav_cn">{$r[catname]}</p><p class="nav_ko">{$r[description]}</p></div><div class="nav_box"></div>
+                    </a>
+                </li>
+{/loop}
+{/pc}
+				<div class="safety">
+					<a href="/zt/AnesthesiaSafetySystem/">
+						<p class="nav_cn">安全与术后管理</p>
+						<p class="nav_ko">안전은수술후관리다</p>
+					</a>
+				</div>
+            </ul>
+            <div id="menu">
+            	<div class="menu_main" id="menu_left">
+                	<div class="menu_box">
+                        <div class="menu_info"><!------------品牌中心---------->
+                        	<div class="menu_list" style="margin-left:150px; margin-right:50px;">
+                            	<p><a href="{$CATEGORYS[12][url]}">品牌</a></p>
+                                <ul>
+{pc:content action="category" catid="1" num="7" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+                                    <li><a href="{$r[url]}">{$r[catname]}</a></li>
+{/loop}
+{/pc}
+                                </ul>
+                            </div>
+                            
+                            <div class="menu_jj">
+                                <div class="menu_jjBox">
+                                	<div class="menu_jj_img"><img src="/Files/Images/tmp/pic31.jpg" alt="中翰整形"/></div>
+                                    <div class="menu_jj_info">
+                                    武汉中翰整形美容医院座落在武汉市武昌美丽的洪山公园旁，是湖北省卫生厅批准成立的现代化专业整形美容医院。集临床、科研、国际学术交流为一体，是全国整形美容医院品牌联盟常务理事单位 、武汉市医院协会理事单位、全国美国赛...<a href="{$CATEGORYS[12][url]}" target="_blank" class="text_a">[查看全文]</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu_zt">
+{pc:content action="position" posid="5" order="listorder ASC" num="2"}
+{loop $data $r}
+                            	<div class="menu_ztBox">
+                                	<div class="menu_ztBox_img"><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],186,80,1)}" width="186" height="80" alt="{$r[title]}" /></a></div>
+                                    <div class="menu_ztBox_info">
+                                    <p><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+                                    <p class="m_t5">{str_cut($r[description],160)}</p>
+                                    </div>
+                                </div>
+{/loop}
+{/pc}
+                            </div>
+                        </div>
+                        <div class="menu_info"><!------------整形美容中心---------->
+{loop subcat(2) $v}
+                        	<div class="menu_list">
+                            	<p><a href="{$v[url]}">{$v[catname]}</a></p>
+                                <ul>
+{pc:content action="category" siteid="1" catid="$v[catid]" num="8"}
+{loop $data $n $r}
+{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+{if $data}
+{loop $data $t}
+                                    <li><a href="{$t[url]}">{$r[catname]}</a></li>
+{/loop}
+{else}
+                                    <li><a href="{$r[url]}">{$r[catname]}</a></li>
+{/if}
+{/pc}
+{/loop}
+{/pc}
+                                </ul>
+                            </div>
+{/loop}
+                            <div class="menu_zt">
+{pc:content action="position" posid="6" order="listorder ASC" num="2"}
+{loop $data $r}
+                            	<div class="menu_ztBox">
+                                	<div class="menu_ztBox_img"><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],186,80,1)}" width="186" height="80" alt="{$r[title]}" /></a></div>
+                                    <div class="menu_ztBox_info">
+                                    <p><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+                                    <p class="m_t5">{str_cut($r[description],160)}</p>
+                                    </div>
+                                </div>
+{/loop}
+{/pc}
+                            </div>
+                        </div>
+                        <div class="menu_info"><!------------皮肤美容中心---------->
+
+{loop subcat(3) $v}
+                        	<div class="menu_list m_r45">
+                            	<p><a href="{$v[url]}">{$v[cid]}{$v[catname]}</a></p>
+                                <ul>
+{loop subcat($v[catid]) $r}
+{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+{if $data}
+{loop $data $t}
+                                    <li><a href="{$t[url]}">{$r[catname]}</a></li>
+{/loop}
+{else}
+                                    <li><a href="{$r[url]}">{$r[catname]}</a></li>
+{/if}
+{/pc}
+{/loop}
+                                </ul>
+                            </div>
+{/loop}
+                            <div class="menu_zt">
+{pc:content action="position" posid="7" order="listorder ASC" num="2"}
+{loop $data $r}
+                            	<div class="menu_ztBox">
+                                	<div class="menu_ztBox_img"><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],186,80,1)}" width="186" height="80" alt="{$r[title]}" /></a></div>
+                                    <div class="menu_ztBox_info">
+                                    <p><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+                                    <p class="m_t5">{str_cut($r[description],160)}</p>
+                                    </div>
+                                </div>
+{/loop}
+{/pc}
+                            </div>
+   
+                        </div>
+                        <div class="menu_info"><!------------注射美容中心---------->
+                            <div class="mAuto">
+							<div class="menuIMGBox">
+                           <a href="/zsmrzx/"><img src="/Files/Images/tmp/pic36.jpg" alt="微整形"/></a>
+                            </div>
+							
+{loop subcat(4) $v}
+                        	<div class="menu_list m_r20">
+                            	<p><a href="{$v[url]}">{$v[cid]}{$v[catname]}</a></p>
+                                <ul>
+{loop subcat($v[catid]) $r}
+{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+{if $data}
+{loop $data $t}
+                                    <li><a href="{$t[url]}">{$r[catname]}</a></li>
+{/loop}
+{else}
+                                    <li><a href="{$r[url]}">{$r[catname]}</a></li>
+{/if}
+{/pc}
+{/loop}
+                                </ul>
+                            </div>
+{/loop}
+                            </div>
+                            <div class="menu_zt">
+{pc:content action="position" posid="8" order="listorder ASC" num="2"}
+{loop $data $r}
+                            	<div class="menu_ztBox">
+                                	<div class="menu_ztBox_img"><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],186,80,1)}" width="186" height="80" alt="{$r[title]}" /></a></div>
+                                    <div class="menu_ztBox_info">
+                                    <p><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+                                    <p class="m_t5">{str_cut($r[description],160)}</p>
+                                    </div>
+                                </div>
+{/loop}
+{/pc}
+                            </div>
+                        </div>
+                        <div class="menu_info"><!------------口腔美容中心---------->
+                            <div class="mAuto">
+							<div class="menuIMGBox">
+                           <a href="/html/kou-qiang/"><img src="/Files/Images/tmp/pic37.jpg" alt="牙齿"/></a>
+                            </div>
+{loop subcat(5) $v}
+                        	<div class="menu_list m_r20">
+                            	<p><a href="{$v[url]}">{$v[cid]}{$v[catname]}</a></p>
+                                <ul>
+{loop subcat($v[catid]) $r}
+{php $sunlion = "`catid`='$r[catid]' AND `xm`='1'"}
+{pc:content action="lists" catid="$r[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="1"}
+{if $data}
+{loop $data $t}
+                                    <li><a href="{$t[url]}">{$r[catname]}</a></li>
+{/loop}
+{else}
+                                    <li><a href="{$r[url]}">{$r[catname]}</a></li>
+{/if}
+{/pc}
+{/loop}
+                                </ul>
+                            </div>
+{/loop}
+                            </div>
+                            <div class="menu_zt">
+{pc:content action="position" posid="9" order="listorder ASC" num="2"}
+{loop $data $r}
+                            	<div class="menu_ztBox">
+                                	<div class="menu_ztBox_img"><a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],186,80,1)}" width="186" height="80" alt="{$r[title]}" /></a></div>
+                                    <div class="menu_ztBox_info">
+                                    <p><a href="{$r[url]}" target="_blank">{$r[title]}</a></p>
+                                    <p class="m_t5">{str_cut($r[description],160)}</p>
+                                    </div>
+                                </div>
+{/loop}
+{/pc}
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+    </div>
+</div>

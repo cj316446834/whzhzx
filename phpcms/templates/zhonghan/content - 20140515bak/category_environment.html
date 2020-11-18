@@ -1,0 +1,61 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner07"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+</div>
+
+<div class="Hj">
+	<div class="Hj_slide">
+{pc:block pos="HJPic"}{/pc}
+	</div>
+
+{loop subcat($catid) $v}
+    <div class="hj_main">
+    	<div class="hj_main_tit">{$v[catname]}</div>
+        <div class="hj_main_list clearfix">
+{pc:content action="lists" catid="$v[catid]"  order="id ASC"}
+{loop $data $t}
+        	<div class="hj_box">
+            	<div class="hj_box_img"><a rel="group" href="{$t[thumb]}"><div class="hj_MG"></div><img alt="{$t[title]}" src="{thumb($t[thumb],171,102,1)}" /><div class="MG"></div></a></div>
+                <p class="hj_box_tit">{$t[title]}</p>
+            </div>
+{/loop}
+{/pc}
+        </div>
+    </div>
+{/loop}
+    
+</div>
+
+{template "content","footer"}
+
+<script type="text/javascript" src="/Files/Scripts/sunlion.fancybox.js"></script>
+<script type="text/javascript">
+jQuery(".Hj_slide").slide({ mainCell:".bd ul",effect:"left",autoPlay:true });
+
+$(document).ready(function(){
+		$(".hj_box_img").hover(function(){
+			$(this).find('.hj_MG').stop().animate({opacity:'.8'},500);
+			$(this).find('.MG').stop().animate({bottom:'35px'},400);
+		},
+		function(){	
+			$(this).find('.hj_MG').stop().animate({opacity:'0'},500);
+			$(this).find('.MG').stop().animate({bottom:'-32px'},400);
+		});
+	});
+
+$(function(){
+$("a[rel=group]").fancybox({
+		'titlePosition' : 'over',
+		'cyclic'        : true,
+		'titleFormat'	: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+				}
+	});
+});
+</script>
+		  
+
+</body>
+</html>

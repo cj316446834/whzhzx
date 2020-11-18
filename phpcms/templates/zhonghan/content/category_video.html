@@ -1,0 +1,46 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner04"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 频道</div>
+</div>
+
+<div class="inside clearfix" style=" padding:0">
+	<div class="video_left">
+    	<div class="video_top">
+        	<p class="text_a font_14 l_h30 b">最新视频</p>
+{pc:content action="lists" catid="$catid" order="id DESC" num="6"}
+{loop $data $r}
+            <div class="video_top_box">
+            	<a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],199,128,1)}" width="199" height="128" alt="{$r[title]}" /></a>
+                    <div class="video_top_tit">{$r[title]}</div>
+            </div>
+{/loop}
+{/pc}
+		</div>
+{loop subcat($catid) $v}
+        <div class="video_BOX">
+        	<p class="txt_right"><span class="font_14 b left">{$v[catname]}</span><a href="{$v[url]}" class="black2">+MORE</a></p>
+            <div style="width:657px;">
+{pc:content action="lists" catid="$v[catid]" order="id DESC" num="6"}
+{loop $data $r}
+            	<div class="video_top_box">
+                    <a href="{$r[url]}" target="_blank"><img src="{thumb($r[thumb],199,128,1)}" width="199" height="128" alt="{$r[title]}" /></a>
+                    <div class="video_top_tit">{$r[title]}</div>
+                </div>
+{/loop}
+{/pc}
+            </div>
+        </div>
+{/loop}
+       <div class="inside_contact"><div class="inside_contactBth01"><a href="/swt/">点击咨询</a></div><div class="inside_contactBth02"><a href="/swt/">专家预约</a></div></div>
+    </div>
+    
+{template "content","inside_right"}
+
+</div>
+
+{template "content","footer"}
+
+</body>
+</html>

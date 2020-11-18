@@ -1,0 +1,38 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner04"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 频道</div>
+</div>
+
+<div class="inside clearfix">
+	<div class="inside_left">
+{loop subcat($catid) $v}
+        <div class="m_b20">
+        	<div class="zt_title txt_right"><span>{$v[catname]}</span><!--<a href="{$v[url]}" class="black2">+MORE</a>--></div>
+            <div class="zt_info clearfix">
+{pc:content action="lists" catid="$v[catid]" num="6" order="id DESC"  page="$page"}
+{loop $data $r}
+            	<div class="zt_box">
+                	<a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="{thumb($r[thumb],138,100,1)}" width="138" height="100" alt="{$r[title]}" />{str_cut($r[title],36)}</a>
+                </div>
+				
+{/loop}
+{/pc}
+                <div id="pages" class="text-c" style="width:100%; padding-top:25px;text-align:center; height:30px; line-height:30px;clear:both;">{$pages}</div>
+            </div>
+			
+        </div>
+{/loop}
+        
+        <div class="inside_contact"><div class="inside_contactBth"><a href="/swt/">点击咨询</a></div></div>
+    </div>
+    
+{template "content","inside_right"}
+
+</div>
+
+{template "content","footer"}
+
+</body>
+</html>

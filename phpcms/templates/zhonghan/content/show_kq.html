@@ -1,0 +1,91 @@
+{template "content","header"}
+
+<div id="Info_banner" class="I_banner03"></div>
+<div class="position">
+	<div class="position_main"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 正文</div>
+</div>
+
+<div class="inside clearfix">
+	<div class="inside_left">
+        <div class="news_info">
+        	<div class="news_info_title">
+            	<div class="news_date"><span>{date('m月',strtotime($inputtime))}</span><br /><span class="font_18 b">{date('d',strtotime($inputtime))}</span></div>
+                <div class="news_biaoti">
+                	<h1 class="news_title_text">{$title}</h1>
+                    <p>
+                    	<div class="news_info_UPtitle">
+                        	<ul>
+                            	<li class="left">来源：<span class="black2">{$copyfrom}</span></li>
+                                <li class="left">阅读量：<span class="black2" id="hits">832</span></li>
+                                <li class="left">
+                                <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a href="http://www.jiathis.com/share" class=" news_jiathis jiathis  jiathis_separator" target="_blank">我要分享</a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375793877052507" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+                                </li>
+                                <li class="right">
+                                【字体大小：<a href="javascript:doZoom(16)"><span class="black2">大</span></a> <a href="javascript:doZoom(14)"><span class="black2">中</span></a> <a href="javascript:doZoom(12)"><span class="black2">小</span></a>】
+                                </li>
+                            </ul>
+                        </div>
+                    </p>
+                </div>
+            </div>
+             
+            <div class="news_main" id="zoom"><!------------正文 开始----------->
+{if $guke}
+            	<div class="pranli_BOX clearfix">
+                    <ul>
+                        <li>
+                            <div class="anliImg_left"><img src="{thumb($shuqian,128,155,1)}"><div class="anliTAB_left">术前</div></div>
+                            <div class="anliImg_right"><img src="{thumb($shuhou,128,155,1)}"><div class="anliTAB_right">术后</div></div>
+                        </li>
+                    </ul>
+                </div>
+{/if}
+                {$content}
+            </div><!------------正文 结束----------->
+        </div>
+        <div class="inside_contact"><div class="inside_contactBth01"><a href="/swt/">点击咨询</a></div><div class="inside_contactBth02"><a href="/swt/">专家预约</a></div></div>
+        
+        <div class="wz_Next_Prev">
+        	<ul>
+            	<li class="left">上一篇：<a href="{$previous_page[url]}">{$previous_page[title]}</a></li>
+                <li class="right txt_right">下一篇：<a href="{$next_page[url]}">{$next_page[title]}</a></li>
+            </ul>
+        </div>
+        <div class="wz_box">
+			<div class="wz_yuedu">
+					<dl class="wz_list">
+						<dt>相关延伸阅读</dt>
+	{pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+	{loop $data $r}
+						<dd><a href="{$r[url]}"><em></em>{$r[title]}</a></dd>
+	{/loop}
+	{/pc}
+					</dl>
+            </div>
+            <div class="left m_l20">
+            	<dl class="wz_list">
+                	<dt>热点推荐</dt>
+				{pc:content  action="hits" num="5" catid="$catid" order="views DESC" cache="3600"}
+				{loop $data $r}
+                    <dd><a href="{$r[url]}" title="{$r[title]}"><em></em>{$r[title]}</a></dd>
+                {/loop}
+				{/pc}
+                </dl>
+           </div>     
+        </div>
+    </div>
+    
+{template "content","right_kq"}
+
+</div>
+
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+{template "content","footer"}
+
+</body>
+</html>

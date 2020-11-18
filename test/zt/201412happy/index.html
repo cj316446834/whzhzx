@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>武汉中翰整形美容-岁末狂欢聚会 焦点女王就是你</title>
+<link href="../zt_head_foot/css/zt_style.css" rel="stylesheet" type="text/css">
+<link href="css/jiu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/lrtk.css" />
+<script type="text/javascript" src="http://www.whzhzxmr.com/Files/Scripts/jquery-1.8.1.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/scrollbar.js"></script>
+<script type="text/javascript">
+/* UEFA Players Slider */
+$(document).ready(function(){
+	var movetime=300;	
+	var maxw=241;
+	var avgw= 120;	
+	var index;
+	var t=false; //延时执行
+	var _this;
+
+	//标记当前
+	function cur(ele){		
+		ele=$(ele)? $(ele):ele;
+		ele.addClass("cur").siblings().removeClass("cur");	
+	};
+	
+	$("#picon li:eq(0)").addClass("cur").animate({"width":maxw+"px"});
+	
+	$("#picon").find("li").mouseover(function(){									  
+		_this=$(this);
+        $(this).find('.price').stop().fadeIn().animate({opacity:'1'},800);  
+		index=$( "#picon li" ).index( $(this)[0] );
+		var act=function (){
+			_this.siblings("li").removeClass("cur");
+
+			_this.animate({"width":maxw+"px"},{duration:movetime,easing:"easeOutQuart",complete:function(){cur(_this)}}).siblings("li").animate({"width":avgw+"px"},{duration:movetime}).find(".price").fadeOut();
+		}
+		t=setTimeout(act,200);
+        
+		return false;	
+        
+	
+	}).mouseout(function(){
+		if(t){
+			clearTimeout(t);
+		}
+	});
+
+
+})
+</script>
+</head>
+
+<body>
+
+<div class="wrap">
+	<div class="ban">
+        <div class="ban1"></div><div class="ban2"></div><div class="ban3"></div><div class="ban4"></div><div class="ban5"></div>  
+    </div>
+    <div class="m1">
+    	<div class="m1Main">
+        	<a class="m1Btn1"></a>
+            <a class="m1Btn2"></a>
+        </div>
+    </div>
+    <div class="m2"></div>
+<!--     <div class="m3">
+    	<div class="m3Main">
+        	<div class="m3MainHead"></div>
+            <div class="scr_con">
+	<div id="dv_scroll">
+		<div id="dv_scroll_text" class="Scroller-Container">
+			<div class="newslist">
+				<ul>
+					<li><img src="images/m3_01.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_02.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_03.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_04.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_05.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_06.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_07.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_08.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_09.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_10.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_11.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_12.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_13.png" width="614" height="131" /></li>
+                    <li><img src="images/m3_14.png" width="614" height="131" /></li>
+				</ul>				
+			</div>
+		</div>
+	</div>
+	<div id="dv_scroll_bar">
+		<div id="dv_scroll_track" class="Scrollbar-Track">
+			<div class="Scrollbar-Handle"></div>
+		</div>
+	</div>
+</div>
+        </div>
+    </div> -->
+    <div class="m4">
+    	<div class="main">
+        	<div class="picon" id="picon">
+            	<ul>
+                	<li><a href="/swt" target="_blank"><img src="images/m4_01.jpg" width="241" height="401" /><div class="price" style="display:block;"><p>特价<b>7500</b>元</p><span>（原价10600元）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_02.jpg" width="241" height="401" /><div class="price"><p>特价<b>7600</b>元</p><span>（原价10800元）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_03.jpg" width="241" height="401" /><div class="price"><p>特价<b>9600</b>元</p><span>（原价13600元）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_04.jpg" width="241" height="401" /><div class="price"><p>特价<b>10300</b>元</p><span>（原价14800元）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_05.jpg" width="241" height="401" /><div class="price"><p>特价<b>10300</b>元</p><span>（原价14800元）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_06.jpg" width="241" height="401" /><div class="price"><p>特价<b>28000</b>元</p><span>（原价38000元）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_07.jpg" width="241" height="401" /><div class="price"><p>买<b>1</b>送<b>1</b></p></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_08.jpg" width="241" height="401" /><div class="price"><p>特价<b>12800</b>元/3次</p><span>（原价19800元/3次）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_09.jpg" width="241" height="401" /><div class="price"><p>特价<b>6800</b>元/5次</p><span>（原价10000元/5次）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_10.jpg" width="241" height="401" /><div class="price"><p>特价<b>12000</b>元/5次</p><span>（原价17000元/5次）</span></div></a></li>
+                    <li><a href="/swt" target="_blank"><img src="images/m4_11.jpg" width="241" height="401" /><div class="price"><p>特价<b>6000</b>元</p><span>（原价8800元）</span></div></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    	<!-- Top Navigation -->
+    	<div id="boxgallery" class="boxgallery" data-effect="effect-1">
+        	<div class="panel"><img src="images/m5_01.jpg" alt="Image 1"/></div>
+        	<div class="panel"><img src="images/m5_03.jpg" alt="Image 3"/></div>
+        	<div class="panel"><img src="images/m5_01.jpg" alt="Image 4"/></div>
+    	</div>
+	</div><!-- /container -->
+    <!-- <div class="m6"></div> -->
+    <div class="m7">
+    	<div class="m7Main">
+        	<a class="zixun m7zixun" href="/swt" target="_blank">进一步了解中翰专家</a>
+        </div>
+    </div>
+    <!-- <div class="m8">
+    	<div class="m8Main">
+        	<a class="zixun m8zixun" href="http://www.yestar1992.cn/Yestar/list-307-1.shtml" target="_blank">进一步了解Yestar的荣誉</a>
+        </div>
+    </div>
+    <div class="m9">
+    	<div class="m9Main">
+        	<a class="zixun m9zixun" href="http://www.yestar1992.cn/Yestar/list-308-1.shtml" target="_blank">进一步了解Yestar的学术</a>
+        </div>
+    </div> -->
+    <div class="m10">
+    	<div class="m10Main">
+        	<a class="m10MainBtn"></a>
+        	<ul>
+            	<li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_01.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_01c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_02.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_02c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_03.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_03c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_04.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_04c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_05.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_05c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_06.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_06c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_07.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_07c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_08.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_08c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_09.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_09c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_10.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_10c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_11.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_11c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_12.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_12c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_13.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_13c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_14.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_14c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_15.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_15c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_16.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_16c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_17.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_17c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_18.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_18c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_19.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_19c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_20.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_20c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_21.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_21c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_22.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_22c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_23.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_23c.jpg" width="150" height="150" /></div>
+                </li>
+                <li>
+                	<a class="bef"></a>
+                    <span><img src="images/m10_24.jpg" width="150" height="150" /></span>
+                    <div><img src="images/m10_24c.jpg" width="150" height="150" /></div>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+    <div class="lx9">
+        <div class="tabBox"> <a class="button lxBtn9" href="/swt" target="_blank">点击咨询</a>
+            <div class="shuNav">
+                <ul>
+                    <li class="shuNav_li_hover"><a class="shuNav_li_hover_a">品牌保障<br />
+                        Brand</a></li>
+                    <li><a>医疗保障<br />
+                        Qualification</a></li>
+                    <li><a>专家保障<br />
+                        Experts</a></li>
+                    <li><a>技术保障<br />
+                        Technology</a></li>
+                    <li><a>安全保障<br />
+                        Anesthesia</a></li>
+                    <li><a>检查保障<br />
+                        Inspection</a></li>
+                    <li><a>无菌保障<br />
+                        Operating</a></li>
+                    <li><a>材料设备保障<br />
+                        Material</a></li>
+                    <li><a>服务保障<br />
+                        Service</a></li>
+                </ul>
+            </div>
+            <div class="tab">
+                <ul>
+                    <li class="block"><img src="images/tab_01.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_02.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_03.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_04.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_05.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_06.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_07.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_08.jpg" width="1188" height="459" /></li>
+                    <li><img src="images/tab_09.jpg" width="1188" height="459" /></li>
+                </ul>
+            </div>
+        </div>
+
+
+<script type="text/javascript" src="/zt/footer/images/foot.js"></script>
+<!--footer   end-->
+
+<SCRIPT>
+<!--
+        function setTab(name, cursel, n) {
+            for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                var con = document.getElementById("con_" + name + "_" + i);
+                menu.className = i == cursel ? "hover" : "";
+                con.style.display = i == cursel ? "block" : "none";
+            }
+        }
+-->
+</SCRIPT>
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?uid=1395967545769859&type=left&amp;move=0" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+<script type="text/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="/swt/zt_swt.js"></script>
+
+<script type="text/javascript">
+    new FloatM({coords_rt:'361,5,380,23',coords_inline:'200,190,335,224',pictype:'png'});
+</script>
+
+
+        <script type="text/javascript">
+$(document).ready(function()
+{	
+    $('.shuNav a').mouseover(function()
+    {
+        var index = $('.shuNav a').index(this);
+        $('.shuNav a').removeClass('shuNav_li_hover_a');
+        $('.shuNav a:eq('+(index)+')').addClass('shuNav_li_hover_a');
+        $('.shuNav li').removeClass('shuNav_li_hover');
+        $('.shuNav li:eq('+(index)+')').addClass('shuNav_li_hover');
+        $('.tab li').removeClass('block');
+        $('.tab li:eq('+(index)+')').addClass('block');
+        
+    });
+});
+</script> 
+    </div>
+<script src="js/classie.js"></script>
+<script src="js/boxesfx.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$('.m10Main li').mouseover(function()
+	{
+		$(this).find('a').show();
+		$(this).find('span').css('opacity',0);
+		$(this).find('div').css('opacity',1);
+	});
+	$('.m10Main li').mouseout(function()
+	{
+		$(this).find('a').hide();
+		$(this).find('span').css('opacity',1);
+		$(this).find('div').css('opacity',0);
+	});
+})
+</script>
+<script>
+new BoxesFx( document.getElementById( 'boxgallery' ) );
+</script>
+</div>
+
+
+
+</body>
+</html>

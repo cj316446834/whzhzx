@@ -1,0 +1,351 @@
+{template "content","header"}
+
+<div id="banner">
+    <div class="banner_Nr div_W">
+        <span class="banner_An_L"><a href="#"><img src="/Files/Images/banner-left.png" /></a></span>
+        <span class="banner_An_R"><a href="#"><img src="/Files/Images/banner-right.png" /></a></span>
+        <div class="Mask-right"></div><div class="Mask-left"></div>
+        <ul class="cl">
+            {pc:block pos="FocusPic"}{/pc}
+        </ul>
+    </div>
+</div>
+
+<div id="in_sub">
+	<div class="main">
+        <div class="in-sub">
+            <ul>
+                <li><a href="{$CATEGORYS[13][url]}">精彩专题</a></li>
+                <li><a href="{$CATEGORYS[14][url]}" rel="nofollow">中翰案例</a></li>
+                <li><a href="{$CATEGORYS[15][url]}" rel="nofollow">尖端设备</a></li>
+                <li><a href="{$CATEGORYS[16][url]}" rel="nofollow">医院环境</a></li>
+                <li><a href="{$CATEGORYS[41][url]}" rel="nofollow">{$CATEGORYS[41][catname]}</a></li>
+                <!--<li><a href="{$CATEGORYS[44][url]}">问答中心</a></li>-->
+				<li><a href="/swt/">问答中心</a></li>
+            </ul>
+        </div>
+        <div class="in_search">
+            <form action="/index.php" method="get" target="_blank">
+            <input name="info[title]" type="text" class="in_input" value="请输入您要搜索的关键字" onfocus="if(this.value=='请输入您要搜索的关键字') {this.value='';}this.style.color='#666';" onblur="if(this.value=='') {this.value='请输入您要搜索的关键字';this.style.color='#ccc';}" style="color: rgb(204, 204, 204);"><input type="submit" class="in_searchBth" value="搜索" />
+            <input type="hidden" name="info[catid]" value="0">
+            <input type="hidden" name="info[typeid]" value="0">
+            <input type="hidden" name="info[keywords]" value="">
+            <input type="hidden" name="orderby" value="a.id DESC">
+            <input type="hidden" name="m" value="content">
+            <input type="hidden" name="c" value="search">
+            <input type="hidden" name="a" value="init">
+            <input type="hidden" name="catid" value="2">
+            <input type="hidden" name="dosubmit" value="1">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="In_main">
+	<div class="In_box01">
+    	<div class="In_box01_left">
+        	<p class="title">中翰印象</p> 
+            <!--<div class="In_video"><a href="http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv" id="player"></a></div>-->
+                  <div class="In_video"><a href="/zhzxmr.flv" id="player"></a></div>
+            
+            <div class="In_video_ad"><!---视频区域广告--->
+            	<a href="/swt/" target="_blank"><img src="/Files/Images/tmp/pic03.gif"></a>
+            </div>
+        </div>
+        <div class="In_box01_middle">
+        	<p class="title"><span class="left">新闻热点</span><a href="{$CATEGORYS[17][url]}">+MORE</a></p>
+{pc:content action="lists" catid="17" order="updatetime DESC" num="6"}
+{loop $data $r}
+{if $n==1}
+            <div class="In_Hotnews">
+            	<p class="In_Hotnews_tit"><a href="{$r[url]}" target="_blank" title="{$r[title]}"{title_style($r[style])}>{$r[title]}</a></p>
+                <p class="text_em m_t10">{str_cut($r[description],160)}<a href="{$r[url]}" target="_blank" class="text_a">[查看详情]</a></p>
+            </div>
+            <ul class="In_Hotnews_list">
+{else}
+            	<li><a href="{$r[url]}" target="_blank" title="{$r[title]}"{title_style($r[style])}>{$r[title]}</a>[{date('Y-m-d',$r[inputtime])}]</li>
+{/if}
+{/loop}
+            </ul>
+        </div>
+{/pc}
+        <div class="In_box01_right">
+        	<p class="In_pj_title">十大王牌项目</p>
+            <ul class="In_pj clearfix">
+{pc:block pos="wangpai"}{/pc}
+            </ul>
+        </div>
+        <div class="clear"></div>
+	</div>
+    
+    <div class="In_pjBox">
+    	<ul class="In_zh_XM" id="In_zh_XM">
+        	<li><a href="{$CATEGORYS[2][url]}" class="seOn">{$CATEGORYS[2][catname]}</a></li>
+            <li><a href="{$CATEGORYS[3][url]}">{$CATEGORYS[3][catname]}</a></li>
+            <li><a href="{$CATEGORYS[4][url]}">{$CATEGORYS[4][catname]}</a></li>
+            <li><a href="{$CATEGORYS[5][url]}">{$CATEGORYS[5][catname]}</a></li>
+        </ul>
+        
+        <div class="In_zh_subXM" id="In_zh_subXM">
+{pc:content action="category" catid="0" num="5" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+{if $r[catid]>1}
+        	<!------------------------{$r[catname]} 开始------------------------>
+        	<div class="In_zh_subXMBox">
+                <ul class="In_zh_subXMList">
+{loop subcat($r[catid]) $s}
+                    <li><a href="{$s[url]}" target="_blank">{$s[catname]}</a></li>
+{/loop}
+                </ul>
+                
+                <div class="In_box01">
+                	<div class="In_box01_left">
+                    	<p class="title">{$r[catname]}特色项目</p>
+                        <div class="In_ts_XM">
+                            <ul class="In_te_XMBox">
+{pc:content action="position" posid="10" catid="$r[catid]" thumb="1" order="listorder ASC"  num="6" }
+{loop $data $n $t}
+                                <li><a href="{$t[url]}" target="_blank" title="{$t[title]}"><img src="{thumb($t[thumb],120,80,1)}" width="120" height="80" alt="{$t[title]}">{$t[title]}</a></li>
+{/loop}
+{/pc}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="In_box01_middle In_news">
+{php $j=1;}
+{loop subcat($r[catid]) $v}
+{php if($v['type']!=0) continue;}
+                    	<div class="In_te_NEWS_Box"><!------{$v[catname]} 开始------->
+{php $catids = $CATEGORYS[$v[catid]][arrchildid]}
+{php $sunlion = "`catid` in($catids) AND `xm`='0'"}
+{pc:content action="lists" catid="$v[catid]" moreinfo="1" where="$sunlion" order="id DESC" num="10"}
+{loop $data $r}
+{if $n==1}
+                            <div class="In_te_NEWS">
+                                <div class="In_te_NEWSImg"><a href="{$r[url]}" target="_blank" title="{$r[title]}"><img src="{thumb($r[thumb],165,115,1)}" width="165" height="115" alt="{$r[title]}" /></a></div>
+                                <div class="In_te_NEWSInfo">
+                                    <p class="In_Hotnews_tit"><a href="{$r[url]}" target="_blank" title="{$r[title]}"{title_style($r[style])}>{str_cut($r[title],50)}</a></p>
+                                    <p class="text_em m_t10 l_h20">{str_cut($r[description],144)}..<a href="{$r[url]}" target="_blank" title="{$r[title]}" class="text_a">[查看详情]</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <ul class="In_Hotnews_list">
+{else}
+                                <li><a href="{$r[url]}" target="_blank" title="{$r[title]}"{title_style($r[style])}>{$r[title]}</a>[{date('Y-m-d',$r[inputtime])}]</li>
+{/if}
+{/loop}
+                            </ul>
+                        </div><!------{$v[catname]} 结束------->
+{/pc}
+
+{$j++}
+{/loop}
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            </div>
+            <!------------------------{$r[catname]} 结束------------------------>
+{/if}
+{/loop}
+{/pc}
+        </div>
+        <div class="QA">
+            	<p class="title"><span class="left">中翰专家</span><a href="{$CATEGORYS[33][url]}" rel="nofollow">+MORE</a></p>
+                <p class="m_t10"><a href="/2014/qwzj_0109/64.html" rel="nofollow"><img src="/Files/Images/tmp/pic12.gif" width="250" height="100"></a></p>
+                <div class="In_Qa">
+                	<ul class="In_QaBox" id="In_QaNAV">
+                    	<li><a href="#">已解决问题</a></li>
+                        <li><a href="#">最新问题</a></li>
+                        <li><a href="#">热门问题</a></li>
+                    </ul>
+                    <div id="In_QaBoxlist">
+                    	<ul class="In_QaInfo">
+                        	<li><a href="#">1我满脸都是雀斑，要多少钱呢</a></li>
+                            <li><a href="#">咨询瘦小腿，筋骨手术，治疗肌肉...</a></li>
+                            <li><a href="#">请问去体毛好多钱，能永久吗？</a></li>
+                            <li><a href="#">开眼角学生价是多少？</a></li>
+                            <li><a href="#">做鼻子假体要多少钱？</a></li>
+                            <li><a href="#">整双眼皮要多少钱</a></li>
+                        </ul>
+                        <ul class="In_QaInfo">
+                        	<li><a href="#">2我满脸都是雀斑，要多少钱呢</a></li>
+                            <li><a href="#">咨询瘦小腿，筋骨手术，治疗肌肉...</a></li>
+                            <li><a href="#">请问去体毛好多钱，能永久吗？</a></li>
+                            <li><a href="#">开眼角学生价是多少？</a></li>
+                            <li><a href="#">做鼻子假体要多少钱？</a></li>
+                            <li><a href="#">整双眼皮要多少钱</a></li>
+                        </ul>
+                        <ul class="In_QaInfo">
+                        	<li><a href="#">3我满脸都是雀斑，要多少钱呢</a></li>
+                            <li><a href="#">咨询瘦小腿，筋骨手术，治疗肌肉...</a></li>
+                            <li><a href="#">请问去体毛好多钱，能永久吗？</a></li>
+                            <li><a href="#">开眼角学生价是多少？</a></li>
+                            <li><a href="#">做鼻子假体要多少钱？</a></li>
+                            <li><a href="#">整双眼皮要多少钱</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+     </div>
+    
+    <div class="In_anli"><!---案例开始---->
+		<p class="title01"><span class="left">中翰案例</span><a href="{$CATEGORYS[14][url]}">+MORE</a></p>
+        <div class="In_anliBox">
+        	<div class="In_anli_ZS" id="In_anliBOX">
+{pc:content action="lists" catid="14" order="listorder ASC" moreinfo="1"  num="12" }
+{loop $data $r}
+            	<div class="In_anli_ZSBox">
+                    <div class="In_anli_ZSBoxImg">
+                    	<div class="anliImg_left"><img src="{thumb($r[shuqian],128,155,1)}" width="128" height="155" alt="整形前"/><div class="anliTAB_left">术前</div></div>
+                        <div class="anliImg_right"><img src="{thumb($r[shuhou],128,155,1)}" width="128" height="155" alt="整形后"/><div class="anliTAB_right">术后</div></div>
+                    </div>
+                    <div class="In_anli_info">
+                    	<p><span></span>{$r[guke]}</p>
+                        <p><span>手术项目：</span>{$r[xiangmu]}</p>
+                        <p><span>打造专家：</span>{$r[zhuanjia]}</p>
+                    </div>
+                </div>
+{/loop}
+{/pc}
+            </div>
+            <div class="In_anli_tx">
+            	<ul class="In_anli_txBOX" id="In_tx">
+{pc:content action="lists" catid="14" order="listorder ASC" moreinfo="1"  num="12" }
+{loop $data $r}
+                	<li><a title="{$r[title]}" style="cursor:pointer;"><img src="{thumb($r[thumb],110,110,1)}" width="110" height="110" /></a></li>
+{/loop}
+{/pc}
+                </ul>
+            </div>
+        </div>
+	</div><!---案例结束---->
+    <div class="In_partner">
+    	<div class="In_ptTitle">
+        	<ul id="In_partner">
+        		<li>合作伙伴</li><li>友情链接</li>
+            </ul>
+        </div>
+        <div class="In_ptInfo" id="In_ptBOX">
+        	<div class="In_ptInfoBox">
+            	<ul class="In_ptlist">
+{pc:link action="type_list" typeid="53" siteid="$siteid" linktype="1" order="listorder ASC" return="link_logo"}
+{loop $link_logo $v}
+                	<li><a target="_blank" style="cursor:pointer;"><img src="{$v[logo]}">{$v[name]}</a></li>
+{/loop}
+{/pc}
+                </ul>
+            </div>
+            <div class="In_ptInfoBox In_Link">
+{pc:link action="type_list" typeid="0" siteid="$siteid" linktype="0" order="listorder ASC" return="link"}
+{loop $link $v}
+            	<a href="{$v[url]}" target="_blank">{$v[name]}</a> 
+{/loop}
+{/pc}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{template "content","footer"}
+<script type="text/javascript" src="/Files/Scripts/flowplayer-3.2.13.min.js"></script>
+<script type="text/javascript">
+        $.foucs({ direction: 'right' });	
+	
+	//banner	
+	$(function(){	
+		var banner_Li_Num = $('#banner li').length+1;
+	//alert(banner_Li_Num)
+	$('#banner ul').css('width',banner_Li_Num*1000).find('li:eq(1)').css('opacity',1);
+	$('#banner span.banner_An_R a').click(function(){
+		$('#banner ul').animate({marginLeft:-2000},600,function(){
+			$(this).css('marginLeft',-1000).find('li:first').insertAfter('#banner li:last');
+			$('#banner li:eq(1)').css('opacity',1).siblings('li').css('opacity',0.9);
+			})
+			return false;
+		})
+	$('#banner span.banner_An_L a').click(function(){
+		$('#banner ul').css('marginLeft',-2000).find('li:last').insertBefore('#banner li:first');
+		$('#banner ul').animate({marginLeft:-1000},600,function(){
+			$('#banner li:eq(1)').css('opacity',1).siblings('li').css('opacity',0.9);
+			});
+		return false;
+		})
+	banner_Auto_Time = setInterval(banner_Auto,6000);
+	function banner_Auto(){
+		$('#banner span.banner_An_L a').trigger('click');
+		}
+	$('#banner').hover(function(){
+		clearInterval(banner_Auto_Time);
+		},function(){
+			banner_Auto_Time = setInterval(banner_Auto,6000);
+			})
+	})
+	
+	
+	//video
+flowplayer( 
+    "player",  
+    "flowplayer-3.2.17.swf",{ 
+      clip: { 
+        url:"/uploadfile/2014/0128/20140128092208721.flv",
+        autoPlay:true,  
+        autoBuffering: true  
+      } 
+    } 
+); 
+		  
+$(document).ready(function(){
+	$(".In_pj li").hover(function(){
+		$(this).find('.In_move').stop().animate({marginTop:'-47px'},400);
+		$(this).find('.In_move01').stop().animate({opacity:'0'},400);
+	},
+	function(){	
+		$(this).find('.In_move').stop().animate({marginTop:'0px'},400);
+		$(this).find('.In_move01').stop().animate({opacity:'1'},400);
+	});	
+	
+});
+  
+  $("#In_zh_XM").tabso({
+		cntSelect:"#In_zh_subXM",
+		tabEvent:"mouseover",
+		onStyle :"seOn",
+		aniSpeed :500,
+		tabStyle:"fade"
+	});
+	$(".In_zh_subXMList").tabso({
+		cntSelect:".In_news",
+		tabEvent:"mouseover",
+		onStyle :"subon",
+		aniSpeed :500,
+		tabStyle:"fade"
+	});
+	$("#In_QaNAV").tabso({
+		cntSelect:"#In_QaBoxlist",
+		tabEvent:"mouseover",
+		onStyle :"QAon",
+		aniSpeed :500,
+		tabStyle:"fade"
+	});
+	$("#In_tx").tabso({
+		cntSelect:"#In_anliBOX",
+		tabEvent:"mouseover",
+		onStyle :"Inse",
+		aniSpeed :700,
+		tabStyle:"fade"
+	});
+	$("#In_partner").tabso({
+		cntSelect:"#In_ptBOX",
+		tabEvent:"mouseover",
+		onStyle :"ptOn",
+		aniSpeed :700,
+		tabStyle:"fade"
+	});
+
+</script>
+
+</body>
+</html>

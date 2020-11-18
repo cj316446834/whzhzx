@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>网站导航 - {$SEO['site_title']}</title>
+<style type="text/css">
+a{text-decoration:none;color:#0000FF;}
+body{line-height: 28px;}
+.con{padding:5px 10px;}
+li{list-style-type:none;}
+li span{float: right;}
+</style>
+</head>
+</head>
+<body>   
+<div style="width:960px; margin:0 auto;border:1px solid #CAD8FF;">
+	<div  class="con" style="background:#E6FDE0; height:30px;">
+		<a href="{siteurl($siteid)}">网站首页</a> - <a href="{siteurl($siteid)}/sitemap.htm">网站导航</a>
+	</div>
+	<div class="con" style="font-weight: bold;">
+		{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+		{loop $data $r}
+		<a href="{$r[url]}">{$r[catname]}</a> 
+		{/loop}
+		{/pc}
+	</div>	
+	<div class="con">
+		{pc:get sql="SELECT title,inputtime,url FROM phpcms_news WHERE status=99 ORDER BY inputtime DESC"  num=50 cache="600" return="data"}
+		{loop $data $key $val}
+		<li><a href="{$val['url']}">{$val['title']}</a><span>{date('Y-m-d',$val[inputtime])}</span></li>
+		{/loop}
+		{/pc}
+	</div>
+	<div  class="con" style="background:#E6FDE0; height:30px;text-align: center">
+	{template "content","footer"}
+	</div>
+	<div  class="con" style=" text-align: center">
+
+	</div>
+</div>
+</body>
+</html>
