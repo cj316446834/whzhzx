@@ -29,6 +29,8 @@ return array (
 ## 后台登录地址
 /zh&admin.php
 帐号密码 admin 123456
+进入后台后配置域名 更新缓存 生成首页 栏目页 文章页
+
 ![image](https://github.com/cj316446834/whzhzx/blob/master/screenshot/1.png)
 ![image](https://github.com/cj316446834/whzhzx/blob/master/screenshot/2.png)
 ![image](https://github.com/cj316446834/whzhzx/blob/master/screenshot/3.png)
